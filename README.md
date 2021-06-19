@@ -3059,7 +3059,7 @@ Manta -> Blanket
 
 Run away --> Escaparse o huir  
 Look out -- > Ser cuidadoso o estar atento 
-Move in --> Mudarse o avanzar 
+Move in --> Mudarse o avanzar  
 Break down --> Dejar de funcionar  
 Come back --> Volver  
 Walk out --> Irse de un lugar de repente  
