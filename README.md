@@ -2,7 +2,7 @@
 theme: gaia
 class:
  - invert
-headingDivider: 2 
+headingDivider: 2
 paginate: true
 -->
 
@@ -11,7 +11,7 @@ _class:
  - lead
  - invert
 -->
-
+# Excelente
 # Learning English
 This is the page that I will use for my english lessons.
 
@@ -558,7 +558,7 @@ Shower -> Ducha
 Cake -> Pastel  
 Water -> Agua  
 Game -> Juego  
-Letter -> Carta 
+Letter -> Carta
 City -> Ciudad  
 Save -> Salvar  
 Notebook -> Cuaderno  
@@ -1898,7 +1898,7 @@ Height -> Estatura
 Female -> Hembra  
 Space -> Espacio  
 Lock -> Cerradura  
-Cross -> Cruzar 
+Cross -> Cruzar
 Fresh -> Fresco  
 Geography -> Geografía  
 Energy -> Energía  
@@ -2213,7 +2213,7 @@ Inside -> Dentro
 Church -> Iglesia  
 Lead -> Llevar  
 Almost -> Casi  
-Boy -> Niño 
+Boy -> Niño
 Attend -> Asistir A  
 Hold -> Agarrar  
 Either -> O  
@@ -3058,7 +3058,7 @@ Manta -> Blanket
 # Verbos Frasales
 
 Run away --> Escaparse o huir  
-Look out -- > Ser cuidadoso o estar atento 
+Look out -- > Ser cuidadoso o estar atento
 Move in --> Mudarse o avanzar  
 Break down --> Dejar de funcionar  
 Come back --> Volver  
@@ -3169,8 +3169,8 @@ Por ejemplo:
 
 
 - I will sleep early.
-- Dormiré temprano. 
- 
+- Dormiré temprano.
+
 <img src = "https://user-images.githubusercontent.com/67721157/119595210-cf960880-bda2-11eb-9d2f-0c8e993b9c41.png" width = "600" height = "350" alt = "ejemplo" align = "center" />
 
 - I will speak English.
@@ -3193,7 +3193,7 @@ Por ejemplo:
 - I shall eat a salad.
 - Comeré una ensalada.
 
-## Would 
+## Would
 
 Este verbo modal se usa para declarar una preferencia y preguntar por algo educadamente, en español es la terminación "ría" al final de cada verbo.
 
@@ -3235,7 +3235,7 @@ Primero lo primero - empezaremos con un breve repaso de las conjugaciones de alg
 
 ## Tiempos simples
 
-En la tabla a continuación encontrarás las conjugaciones para the 
+En la tabla a continuación encontrarás las conjugaciones para the
 present (el presente) y the past (el pretérito) de to be.
 
 | Sujeto | Present | Past |
@@ -3248,7 +3248,7 @@ present (el presente) y the past (el pretérito) de to be.
 
 ## Tiempos compuestos
 
-En la tabla a continuación encontrarás las conjugaciones para the simple 
+En la tabla a continuación encontrarás las conjugaciones para the simple
 future (el futuro simple), the informal future (el futuro perifrástico), the present continuous (el presente progresivo), the present perfect (el pretérito perfecto) y the conditional (el condicional) de to be.
 
 | Sujeto | SIMPLE FUTURE | INFORMAL FUTURE | PRESENT CONTINUOUS | PRESENT PERFECT |
