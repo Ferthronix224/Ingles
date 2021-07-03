@@ -1,0 +1,3534 @@
+<!DOCTYPE html><html lang="POSIX"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS13aWR0aDo1cHh9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yMCA2MGgtNWE1IDUgMCAwMS01LTVWMjBhNSA1IDAgMDE1LTVoNjBhNSA1IDAgMDE1IDV2NU0zMCA4NWg2MCIvPjxyZWN0IHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIi8+PHJlY3QgY2xhc3M9ImEiIHg9IjMwIiB5PSIzNSIgd2lkdGg9IjYwIiBoZWlnaHQ9IjQwIiByeD0iNSIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNDAgNTBoNDBNNDAgNjBoMzAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1;will-change:transform}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:transparent}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{height:100%;left:0;position:absolute;top:0;width:100%;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:minmax(140px,1fr) 2fr 3em;grid-template-areas:"current next" "current note" "info    note"}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;position:relative;overflow:hidden}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;top:20px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{-webkit-filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:transparent;border:0;display:block;-webkit-filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;position:absolute;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;top:20px;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#ddd;grid-area:note}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{margin:20px;width:calc(100% - 40px);height:calc(100% - 40px);box-sizing:border-box;overflow:auto;padding-right:3px;white-space:pre-wrap;word-wrap:break-word;scrollbar-width:thin;scrollbar-color:hsla(0,0%,86.7%,.5) transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:transparent}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:hsla(0,0%,86.7%,.5);border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#ddd;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{display:block;box-sizing:border-box;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import url("https://fonts.googleapis.com/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap");div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}div#p>svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section .hljs{display:block;overflow-x:auto;padding:.5em;background:#000;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-comment,div#p>svg>foreignObject>section .hljs-quote{color:#aeaeae;font-style:italic}div#p>svg>foreignObject>section .hljs-keyword,div#p>svg>foreignObject>section .hljs-selector-tag,div#p>svg>foreignObject>section .hljs-type{color:#e28964}div#p>svg>foreignObject>section .hljs-string{color:#65b042}div#p>svg>foreignObject>section .hljs-subst{color:#daefa3}div#p>svg>foreignObject>section .hljs-link,div#p>svg>foreignObject>section .hljs-regexp{color:#e9c062}div#p>svg>foreignObject>section .hljs-name,div#p>svg>foreignObject>section .hljs-section,div#p>svg>foreignObject>section .hljs-tag,div#p>svg>foreignObject>section .hljs-title{color:#89bdff}div#p>svg>foreignObject>section .hljs-class .hljs-title,div#p>svg>foreignObject>section .hljs-doctag{text-decoration:underline}div#p>svg>foreignObject>section .hljs-bullet,div#p>svg>foreignObject>section .hljs-number,div#p>svg>foreignObject>section .hljs-symbol{color:#3387cc}div#p>svg>foreignObject>section .hljs-params,div#p>svg>foreignObject>section .hljs-template-variable,div#p>svg>foreignObject>section .hljs-variable{color:#3e87e3}div#p>svg>foreignObject>section .hljs-attribute{color:#cda869}div#p>svg>foreignObject>section .hljs-meta{color:#8996a8}div#p>svg>foreignObject>section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#p>svg>foreignObject>section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#p>svg>foreignObject>section .hljs-selector-class{color:#9b703f}div#p>svg>foreignObject>section .hljs-selector-id{color:#8b98ab}div#p>svg>foreignObject>section .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section .hljs-strong{font-weight:700}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:580px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:.5em 0 0}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:1.8em}div#p>svg>foreignObject>section h2{font-size:1.5em}div#p>svg>foreignObject>section h3{font-size:1.3em}div#p>svg>foreignObject>section h4{font-size:1.1em}div#p>svg>foreignObject>section h5{font-size:1em}div#p>svg>foreignObject>section h6{font-size:.9em}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:1em 0 0}div#p>svg>foreignObject>section ol>li,div#p>svg>foreignObject>section ul>li{margin:.3em 0 0}div#p>svg>foreignObject>section ol>li>p,div#p>svg>foreignObject>section ul>li>p{margin:.6em 0 0}div#p>svg>foreignObject>section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#p>svg>foreignObject>section pre{display:block;margin:1em 0 0;min-height:1em;overflow:visible}div#p>svg>foreignObject>section pre code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#p>svg>foreignObject>section pre code svg[data-marp-fitting=svg]{max-height:calc(580px - 1em)}div#p>svg>foreignObject>section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#p>svg>foreignObject>section blockquote:before{top:0;left:0}div#p>svg>foreignObject>section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:first-child{margin-top:0}div#p>svg>foreignObject>section mark{background:transparent}div#p>svg>foreignObject>section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#p>svg>foreignObject>section{background-image:linear-gradient(135deg,hsla(0,0%,53.3%,0),hsla(0,0%,53.3%,.02) 50%,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.05));font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;word-wrap:break-word;color:#455a64;background-color:#fff8e1}div#p>svg>foreignObject>section{--marpit-root-font-size:35px}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section>header:first-child+*{margin-top:0}div#p>svg>foreignObject>section a,div#p>svg>foreignObject>section mark{color:#0288d1}div#p>svg>foreignObject>section code{background:#6a7a7d;color:#fff8e1}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#0288d1}div#p>svg>foreignObject>section pre>code{background:#455a64}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header,div#p>svg>foreignObject>section section:after{color:#6a7a7d}div#p>svg>foreignObject>section table td,div#p>svg>foreignObject>section table th{border-color:#455a64}div#p>svg>foreignObject>section table thead th{background:#455a64;color:#fff8e1}div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section table tbody>tr:nth-child(odd) th{background:rgba(69,90,100,.1)}div#p>svg>foreignObject>section.invert{color:#fff8e1;background-color:#455a64}div#p>svg>foreignObject>section.invert a,div#p>svg>foreignObject>section.invert mark{color:#81d4fa}div#p>svg>foreignObject>section.invert code{background:#dad8c8;color:#455a64}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#81d4fa}div#p>svg>foreignObject>section.invert pre>code{background:#fff8e1}div#p>svg>foreignObject>section.invert blockquote:after,div#p>svg>foreignObject>section.invert blockquote:before,div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header,div#p>svg>foreignObject>section.invert section:after{color:#dad8c8}div#p>svg>foreignObject>section.invert table td,div#p>svg>foreignObject>section.invert table th{border-color:#fff8e1}div#p>svg>foreignObject>section.invert table thead th{background:#fff8e1;color:#455a64}div#p>svg>foreignObject>section.invert table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section.invert table tbody>tr:nth-child(odd) th{background:rgba(255,248,225,.1)}div#p>svg>foreignObject>section.gaia{color:#fff8e1;background-color:#0288d1}div#p>svg>foreignObject>section.gaia a,div#p>svg>foreignObject>section.gaia mark{color:#81d4fa}div#p>svg>foreignObject>section.gaia code{background:#cce2de;color:#0288d1}div#p>svg>foreignObject>section.gaia h1 strong,div#p>svg>foreignObject>section.gaia h2 strong,div#p>svg>foreignObject>section.gaia h3 strong,div#p>svg>foreignObject>section.gaia h4 strong,div#p>svg>foreignObject>section.gaia h5 strong,div#p>svg>foreignObject>section.gaia h6 strong{color:#81d4fa}div#p>svg>foreignObject>section.gaia pre>code{background:#fff8e1}div#p>svg>foreignObject>section.gaia blockquote:after,div#p>svg>foreignObject>section.gaia blockquote:before,div#p>svg>foreignObject>section.gaia footer,div#p>svg>foreignObject>section.gaia header,div#p>svg>foreignObject>section.gaia section:after{color:#cce2de}div#p>svg>foreignObject>section.gaia table td,div#p>svg>foreignObject>section.gaia table th{border-color:#fff8e1}div#p>svg>foreignObject>section.gaia table thead th{background:#fff8e1;color:#0288d1}div#p>svg>foreignObject>section.gaia table tbody>tr:nth-child(odd) td,div#p>svg>foreignObject>section.gaia table tbody>tr:nth-child(odd) th{background:rgba(255,248,225,.1)}div#p>svg>foreignObject>section.lead{display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:center}div#p>svg>foreignObject>section.lead h1,div#p>svg>foreignObject>section.lead h2,div#p>svg>foreignObject>section.lead h3,div#p>svg>foreignObject>section.lead h4,div#p>svg>foreignObject>section.lead h5,div#p>svg>foreignObject>section.lead h6{text-align:center}div#p>svg>foreignObject>section.lead h1 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h2 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h3 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h4 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h5 svg[data-marp-fitting=svg],div#p>svg>foreignObject>section.lead h6 svg[data-marp-fitting=svg]{--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section.lead p{text-align:center}div#p>svg>foreignObject>section.lead blockquote>h1,div#p>svg>foreignObject>section.lead blockquote>h2,div#p>svg>foreignObject>section.lead blockquote>h3,div#p>svg>foreignObject>section.lead blockquote>h4,div#p>svg>foreignObject>section.lead blockquote>h5,div#p>svg>foreignObject>section.lead blockquote>h6,div#p>svg>foreignObject>section.lead blockquote>p{text-align:left}div#p>svg>foreignObject>section.lead blockquote svg[data-marp-fitting=svg]:not([data-marp-fitting-math]){--preserve-aspect-ratio:xMinYMin meet}div#p>svg>foreignObject>section.lead ol>li>p,div#p>svg>foreignObject>section.lead ul>li>p{text-align:left}div#p>svg>foreignObject>section.lead table{margin-left:auto;margin-right:auto}div#p>svg>foreignObject>section:after,div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#p>svg>foreignObject>section:after{--marpit-root-font-size:66%}div#p>svg>foreignObject>section header{top:0}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{left:0;right:0}div#p>svg>foreignObject>section footer{bottom:0}div#p>svg>foreignObject>section:after{right:0;bottom:0;font-size:80%}div#p>svg>foreignObject>section:after{--marpit-root-font-size:80%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="lead invert" data-marpit-pagination="1" data-marpit-pagination-total="30" style="--class:lead invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h1>Learning English</h1>
+<p>This is the page that I will use for my english lessons.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="2" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h1>Temario</h1>
+<ul>
+<li><a href="#vocabulario">Vocabulario</a></li>
+<li><a href="#verbos-modales">Verbos Modales</a></li>
+<li><a href="#verbos-frasales">Verbos Frasales</a></li>
+<li><a href="#el-verbo-to-be-en-presente">El verbo to be en presente</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="3" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h1>Vocabulario</h1>
+<ul>
+<li><a href="#principiante">Principiante</a></li>
+<li><a href="#intermedio">Intermedio</a></li>
+<li><a href="#avanzado">Avanzado</a></li>
+<li><a href="#extras">Extras</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="4" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Principiante</h2>
+<p>Any -&gt; Alguno<br />
+Warm -&gt; Cálido<br />
+Building -&gt; Edificio<br />
+Pasta -&gt; Pasta<br />
+Refrigerator -&gt; Refrigerador<br />
+Order -&gt; Ordenar<br />
+Pick Up -&gt; Recoger<br />
+Argue -&gt; Discutir<br />
+Noisy -&gt; Ruidoso<br />
+Post Office -&gt; Oficina De Correos<br />
+Charge -&gt; Cargo<br />
+Excited -&gt; Emocionado<br />
+Tall -&gt; Alto<br />
+Under -&gt; Debajo De<br />
+Coat -&gt; Abrigo<br />
+Tie -&gt; Corbata<br />
+Butter -&gt; Mantequilla<br />
+Shrimp -&gt; Camarón<br />
+Advice -&gt; Consejo<br />
+Shop -&gt; Comprar<br />
+Offer -&gt; Ofrecer<br />
+Borrow -&gt; Pedir Prestado<br />
+Career -&gt; Carrera<br />
+Cough -&gt; Tos<br />
+Patient -&gt; Paciente<br />
+Skill -&gt; Habilidad<br />
+Cell Phone -&gt; Teléfono Celular<br />
+Set Up -&gt; Montar<br />
+Crash -&gt; Chocar<br />
+Grow Up -&gt; Crecer<br />
+Unusual -&gt; Inusual<br />
+Pea -&gt; Guisante<br />
+At -&gt; En<br />
+Fall -&gt; Caer<br />
+Breakfast -&gt; Desayuno<br />
+Sink -&gt; Fregadero<br />
+Kind -&gt; Amable<br />
+Safe -&gt; Seguro<br />
+Trip -&gt; Viaje<br />
+Ear -&gt; Oreja<br />
+Thin -&gt; Delgado<br />
+Nurse -&gt; Enfermero<br />
+Skirt -&gt; Falda<br />
+Fix -&gt; Arreglar<br />
+Paint -&gt; Pintar<br />
+Sofa -&gt; Sofá<br />
+Upset -&gt; Molesto<br />
+Sport -&gt; Deporte<br />
+Plumber -&gt; Plomero<br />
+Boot -&gt; Bota<br />
+Cool -&gt; Fresco<br />
+Can -&gt; Lata<br />
+Aunt -&gt; Tía<br />
+Football -&gt; Fútbol Americano<br />
+Company -&gt; Empresa<br />
+Toilet -&gt; Inodoro<br />
+Encourage -&gt; Animar<br />
+Agree -&gt; Estar De Acuerdo<br />
+Sure -&gt; Seguro<br />
+Stove -&gt; Cocina<br />
+Burn -&gt; Quemar<br />
+Lawyer -&gt; Abogado<br />
+Large -&gt; Grande<br />
+River -&gt; Río<br />
+Fifth -&gt; Quinto<br />
+Relaxing -&gt; Relajante<br />
+Tenth -&gt; Décimo<br />
+Ninth -&gt; Noveno<br />
+Event -&gt; Acontecimiento<br />
+Work Out -&gt; Hacer Ejercicio<br />
+Bookstore -&gt; Librería<br />
+Break Down -&gt; Derribar<br />
+Headphone -&gt; Audífono<br />
+Should -&gt; Deber<br />
+Sore Throat -&gt; Dolor De Garganta<br />
+Amazing -&gt; Asombroso<br />
+Thirty -&gt; Treinta<br />
+Forty -&gt; Cuarenta<br />
+One Hundred And One -&gt; Ciento Uno<br />
+Beef -&gt; Carne De Vaca<br />
+Wedding -&gt; Boda<br />
+Waiter -&gt; Camarero<br />
+Meal -&gt; Comida<br />
+Review -&gt; Revisar<br />
+Furniture -&gt; Muebles<br />
+Actually -&gt; En Realidad<br />
+Wide -&gt; Ancho<br />
+Spicy -&gt; Picante<br />
+Listen To Music -&gt; Escuchar Música<br />
+Parent -&gt; Padre<br />
+Dancing -&gt; Baile<br />
+Accountant -&gt; Contador<br />
+Take Out -&gt; Sacar<br />
+Washing Machine -&gt; Lavadora<br />
+Grape -&gt; Uva<br />
+Salary -&gt; Salario<br />
+Jam -&gt; Mermelada<br />
+Loan -&gt; Préstamo<br />
+Shout -&gt; Gritar<br />
+Complaint -&gt; Queja<br />
+Fascinating -&gt; Fascinante<br />
+Salesperson -&gt; Vendedor<br />
+Moody -&gt; Malhumorado<br />
+By -&gt; Por<br />
+Get Engaged -&gt; Comprometerse<br />
+Get In Shape -&gt; Estar En Forma<br />
+Get Home -&gt; Llegar A Casa<br />
+Stomachache -&gt; Dolor De Estómago<br />
+Right -&gt; Correcto<br />
+Lunch -&gt; Almuerzo<br />
+Scared -&gt; Asustado<br />
+Schedule -&gt; Programa<br />
+Really -&gt; Muy<br />
+Must -&gt; Deber<br />
+Backpack -&gt; Mochila<br />
+Snack -&gt; Tentempié<br />
+Challenge -&gt; Reto<br />
+College -&gt; Universidad<br />
+Pepper -&gt; Pimienta<br />
+Nephew -&gt; Sobrino<br />
+Italy -&gt; Italia<br />
+Cashier -&gt; Cajero<br />
+Armchair -&gt; Sillón<br />
+Subway -&gt; Metro<br />
+Police Officer -&gt; Policía<br />
+Attractive -&gt; Atractivo<br />
+Cure -&gt; Curar<br />
+Taxi Driver -&gt; Taxista<br />
+Have Dinner -&gt; Cenar<br />
+Passenger -&gt; Pasajero<br />
+Through -&gt; Por<br />
+Go For A Walk -&gt; Dar Un Paseo<br />
+Outside -&gt; Afuera<br />
+Café -&gt; Café<br />
+Baseball -&gt; Béisbol<br />
+Helpful -&gt; Servicial<br />
+Rude -&gt; Maleducado<br />
+Dry -&gt; Seco<br />
+Dessert -&gt; Postre<br />
+Soda -&gt; Refresco<br />
+Shorts -&gt; Short<br />
+Taste -&gt; Gusto<br />
+French -&gt; Francés<br />
+Top -&gt; Camisa<br />
+Improve -&gt; Mejorar<br />
+Niece -&gt; Sobrina<br />
+Across -&gt; Enfrente De<br />
+Neighborhood -&gt; Barrio<br />
+Partner -&gt; Pareja<br />
+Opposite -&gt; Contrario<br />
+Peach -&gt; Melocotón<br />
+Increase -&gt; Aumentar<br />
+Let -&gt; Dejar<br />
+Purse -&gt; Cartera<br />
+Over -&gt; Encima De<br />
+Like -&gt; Como<br />
+Which -&gt; Cuál<br />
+As -&gt; Como<br />
+About -&gt; Sobre<br />
+Sentence -&gt; Oración<br />
+Pineapple -&gt; Piña<br />
+Pie -&gt; Tarta<br />
+Although -&gt; Aunque<br />
+Then -&gt; Entonces<br />
+Around -&gt; Alrededor<br />
+Cute -&gt; Lindo<br />
+Only -&gt; Solo<br />
+Also -&gt; También<br />
+However -&gt; Sin Embargo<br />
+Most -&gt; La Mayoría De<br />
+Loud -&gt; Ruidoso<br />
+Leader -&gt; Líder<br />
+Easter -&gt; Pascua<br />
+Until -&gt; Hasta<br />
+Speak -&gt; Hablar<br />
+Friendly -&gt; Simpático<br />
+Wear -&gt; Llevar<br />
+From -&gt; De<br />
+Give Up -&gt; Dejar<br />
+That -&gt; Que<br />
+Will -&gt; Voluntad<br />
+Hope -&gt; Esperar<br />
+Still -&gt; Aún<br />
+Believe -&gt; Creer<br />
+Lie Down -&gt; Acostarse<br />
+Put Off -&gt; Posponer<br />
+Often -&gt; A Menudo<br />
+Quiet -&gt; Silencio<br />
+Cheese -&gt; Queso<br />
+Near -&gt; Cerca<br />
+Potato -&gt; Papa<br />
+Living Room -&gt; Sala De Estar<br />
+Daughter -&gt; Hija<br />
+Ride -&gt; Montar<br />
+Get Married -&gt; Casarse<br />
+Healthy -&gt; Sano<br />
+Fall -&gt; Otoño<br />
+Holiday -&gt; Día De Fiesta<br />
+Tired -&gt; Cansado<br />
+Autumn -&gt; Otoño<br />
+Job -&gt; Trabajo<br />
+Season -&gt; Estación<br />
+Everyday -&gt; Diario<br />
+Great -&gt; Excelente<br />
+Nice -&gt; Amable<br />
+Leave -&gt; Dejar<br />
+Pretty -&gt; Bonito<br />
+Bedroom -&gt; Cuarto<br />
+This -&gt; Este<br />
+Awful -&gt; Horrible<br />
+Become -&gt; Convertirse En<br />
+Half An Hour -&gt; Media Hora<br />
+Well -&gt; Bien<br />
+Rice -&gt; Arroz<br />
+Noon -&gt; Mediodía<br />
+Refuse -&gt; Rechazar<br />
+Tea -&gt; Té<br />
+Manager -&gt; Director<br />
+House -&gt; Casa<br />
+Bored -&gt; Aburrido<br />
+Laptop -&gt; Portátil<br />
+Polite -&gt; Educado<br />
+Flour -&gt; Harina<br />
+Driver -&gt; Conductor<br />
+Carrot -&gt; Zanahoria<br />
+Interest -&gt; Interés<br />
+Gate -&gt; Puerta<br />
+You're Welcome -&gt; De Nada<br />
+Lazy -&gt; Perezoso<br />
+Take Off -&gt; Quitarse<br />
+Address -&gt; Dirección<br />
+Comfortable -&gt; Cómodo<br />
+Research -&gt; Investigación<br />
+Purple -&gt; Morado<br />
+Gray -&gt; Gris<br />
+Yellow -&gt; Amarillo<br />
+Green -&gt; Verde<br />
+Brown -&gt; Marrón<br />
+Gold -&gt; Oro<br />
+White -&gt; Blanco<br />
+Red -&gt; Rojo<br />
+Work -&gt; Trabajar<br />
+Get -&gt; Conseguir<br />
+Make -&gt; Hacer<br />
+Orange -&gt; Anaranjado<br />
+Black -&gt; Negro<br />
+Pink -&gt; Rosado<br />
+Color -&gt; Color<br />
+Silver -&gt; Plata<br />
+Drive -&gt; Manejar<br />
+Have -&gt; Tener<br />
+Cold -&gt; Frío<br />
+Teacher -&gt; Profesor<br />
+Go -&gt; Ir<br />
+Take -&gt; Tomar<br />
+Study -&gt; Estudiar<br />
+Car -&gt; Coche<br />
+Short -&gt; Corto<br />
+In -&gt; En<br />
+Beautiful -&gt; Hermoso<br />
+Bread -&gt; Pan<br />
+Banana -&gt; Plátano<br />
+Happy -&gt; Feliz<br />
+Live -&gt; Vivir<br />
+Milk -&gt; Leche<br />
+Interesting -&gt; Interesante<br />
+Funny -&gt; Gracioso<br />
+Actor -&gt; Actor<br />
+Old -&gt; Viejo<br />
+Give -&gt; Dar<br />
+Computer -&gt; Computadora<br />
+Eat -&gt; Comer<br />
+Cook -&gt; Cocinar<br />
+Business -&gt; Negocios<br />
+Expensive -&gt; Caro<br />
+Buy -&gt; Comprar<br />
+Watch -&gt; Ver<br />
+Park -&gt; Parque<br />
+Month -&gt; Mes<br />
+January -&gt; Enero<br />
+Fruit -&gt; Fruta<br />
+February -&gt; Febrero<br />
+Read -&gt; Leer<br />
+Meet -&gt; Conocer<br />
+Do -&gt; Hacer<br />
+Play -&gt; Jugar<br />
+June -&gt; Junio<br />
+March -&gt; Marzo<br />
+May -&gt; Mayo<br />
+August -&gt; Agosto<br />
+April -&gt; Abril<br />
+September -&gt; Septiembre<br />
+July -&gt; Julio<br />
+October -&gt; Octubre<br />
+Monday -&gt; Lunes<br />
+December -&gt; Diciembre<br />
+Week -&gt; Semana<br />
+Friday -&gt; Viernes<br />
+Thursday -&gt; Jueves<br />
+Wednesday -&gt; Miércoles<br />
+November -&gt; Noviembre<br />
+Tuesday -&gt; Martes<br />
+Winter -&gt; Invierno<br />
+Sunday -&gt; Domingo<br />
+Spring -&gt; Primavera<br />
+Summer -&gt; Verano<br />
+Saturday -&gt; Sábado<br />
+Never -&gt; Nunca<br />
+Brother -&gt; Hermano<br />
+Long -&gt; Largo<br />
+Doctor -&gt; Médico<br />
+Coffee -&gt; Café<br />
+Usually -&gt; Usualmente<br />
+Drink -&gt; Beber<br />
+Train -&gt; Tren<br />
+Vegetable -&gt; Vegetal<br />
+Help -&gt; Ayudar<br />
+Book -&gt; Libro<br />
+Food -&gt; Comida<br />
+Dance -&gt; Bailar<br />
+Start -&gt; Comenzar<br />
+Clean -&gt; Limpiar<br />
+Fish -&gt; Pescado<br />
+School -&gt; Escuela<br />
+Yesterday -&gt; Ayer<br />
+Boring -&gt; Aburrido<br />
+See -&gt; Ver<br />
+Tomorrow -&gt; Mañana<br />
+Day -&gt; Día<br />
+Time -&gt; Hora<br />
+Morning -&gt; Mañana<br />
+Year -&gt; Año<br />
+Today -&gt; Hoy<br />
+Evening -&gt; Tarde<br />
+Date -&gt; Fecha<br />
+Minute -&gt; Minuto<br />
+Hour -&gt; Hora<br />
+Plan -&gt; Planear<br />
+Past -&gt; Pasado<br />
+Present -&gt; Actual<br />
+Future -&gt; Futuro<br />
+Chicken -&gt; Pollo<br />
+Afternoon -&gt; Tarde<br />
+Good -&gt; Bueno<br />
+Behind -&gt; Detrás De<br />
+Tell -&gt; Contar<br />
+Go To Bed -&gt; Irse A La Cama<br />
+Pen -&gt; Pluma<br />
+Child -&gt; Niño<br />
+Open -&gt; Abrir<br />
+Jacket -&gt; Chaqueta<br />
+Small -&gt; Pequeño<br />
+Spend -&gt; Gastar<br />
+Jeans -&gt; Vaqueros<br />
+Husband -&gt; Esposo<br />
+Walk -&gt; Caminar<br />
+Money -&gt; Dinero<br />
+Dress -&gt; Vestido<br />
+Sister -&gt; Hermana<br />
+Talk -&gt; Hablar<br />
+Hot -&gt; Caliente<br />
+Travel -&gt; Viajar<br />
+Restaurant -&gt; Restaurante<br />
+Write -&gt; Escribir<br />
+Friend -&gt; Amigo<br />
+Apple -&gt; Manzana<br />
+Meat -&gt; Carne<br />
+Come -&gt; Venir<br />
+Next To -&gt; Al Lado De<br />
+Cheap -&gt; Barato<br />
+Run -&gt; Correr<br />
+Country -&gt; País<br />
+Know -&gt; Saber<br />
+Head -&gt; Cabeza<br />
+Use -&gt; Usar<br />
+Send -&gt; Enviar<br />
+Hotel -&gt; Hotel<br />
+Exercise -&gt; Hacer Ejercicio<br />
+Swim -&gt; Nadar<br />
+Family -&gt; Familia<br />
+Change -&gt; Cambiar<br />
+Time -&gt; Tiempo<br />
+Weekend -&gt; Fin De Semana<br />
+Late -&gt; Tarde<br />
+Those -&gt; Esos<br />
+Mother -&gt; Madre<br />
+Test -&gt; Examen<br />
+Night -&gt; Noche<br />
+Midnight -&gt; Medianoche<br />
+Last Night -&gt; Anoche<br />
+Last Year -&gt; Año Pasado<br />
+Calendar -&gt; Calendario<br />
+Century -&gt; Siglo<br />
+On -&gt; Sobre<br />
+Finish -&gt; Terminar<br />
+Bus -&gt; Autobús<br />
+Lose -&gt; Perder<br />
+Grandfather -&gt; Abuelo<br />
+Museum -&gt; Museo<br />
+Home -&gt; Hogar<br />
+Break -&gt; Romper<br />
+Love -&gt; Amor<br />
+Big -&gt; Grande<br />
+Between -&gt; Entre<br />
+Sleep -&gt; Dormir<br />
+Son -&gt; Hijo<br />
+Chair -&gt; Silla<br />
+Choose -&gt; Escoger<br />
+Visit -&gt; Visita<br />
+Call -&gt; Llamar<br />
+Wife -&gt; Esposa<br />
+Miss -&gt; Extrañar<br />
+Get Up -&gt; Levantarse<br />
+Dangerous -&gt; Peligroso<br />
+Cut -&gt; Cortar<br />
+Bank -&gt; Banco<br />
+Father -&gt; Padre<br />
+Grandmother -&gt; Abuela<br />
+Student -&gt; Estudiante<br />
+Find -&gt; Encontrar<br />
+Can -&gt; Poder<br />
+Sometimes -&gt; A Veces<br />
+Need -&gt; Necesitar<br />
+Always -&gt; Siempre<br />
+Language -&gt; Idioma<br />
+New -&gt; Nuevo<br />
+Listen -&gt; Escuchar<br />
+Hurt -&gt; Hacer Daño<br />
+Hard -&gt; Duro<br />
+Light -&gt; Luz<br />
+Busy -&gt; Ocupado<br />
+Music -&gt; Música<br />
+Movie -&gt; Película<br />
+Feel -&gt; Sentir<br />
+Young -&gt; Joven<br />
+Vacation -&gt; Vacaciones<br />
+Sit -&gt; Sentarse<br />
+Picture -&gt; Foto<br />
+Ice Cream -&gt; Helado<br />
+Tomato -&gt; Tomate<br />
+Closet -&gt; Armario<br />
+Fantastic -&gt; Fantástico<br />
+Exciting -&gt; Emocionante<br />
+Bag -&gt; Bolsa<br />
+Say -&gt; Decir<br />
+Learn -&gt; Aprender<br />
+Be -&gt; Estar<br />
+Be -&gt; Ser<br />
+Like -&gt; Gustar<br />
+Homework -&gt; Tarea<br />
+Moon -&gt; Luna<br />
+Sandwich -&gt; Sándwich<br />
+Return -&gt; Regresar<br />
+Hamburger -&gt; Hamburguesa<br />
+High School -&gt; Escuela Secundaria<br />
+Stay -&gt; Quedarse<br />
+Hi -&gt; Hola<br />
+Please -&gt; Por Favor<br />
+Goodbye -&gt; Adiós<br />
+Hello -&gt; Hola<br />
+I'm Sorry -&gt; Perdón<br />
+Excuse Me -&gt; Perdón<br />
+Angry -&gt; Enojado<br />
+Try -&gt; Intentar<br />
+Put -&gt; Poner<br />
+Shirt -&gt; Camisa<br />
+Sing -&gt; Cantar<br />
+Look -&gt; Mirar<br />
+Blue -&gt; Azul<br />
+Clothes -&gt; Ropa<br />
+Orange -&gt; Naranja<br />
+Different -&gt; Diferente<br />
+Easy -&gt; Fácil<br />
+Sugar -&gt; Azúcar<br />
+Difficult -&gt; Difícil<br />
+Onion -&gt; Cebolla<br />
+Suit -&gt; Traje<br />
+Singer -&gt; Cantante<br />
+Airport -&gt; Aeropuerto<br />
+Wonderful -&gt; Maravilloso<br />
+Information -&gt; Información<br />
+Juice -&gt; Jugo<br />
+Apartment -&gt; Apartamento<br />
+Umbrella -&gt; Paraguas<br />
+Egg -&gt; Huevo<br />
+When -&gt; Cuándo<br />
+Watch Tv -&gt; Mirar La Tele<br />
+For -&gt; Para<br />
+Credit Card -&gt; Tarjeta De Crédito<br />
+Map -&gt; Mapa<br />
+Watch -&gt; Reloj<br />
+Place -&gt; Lugar<br />
+Ask -&gt; Preguntar<br />
+Where -&gt; Dónde<br />
+Bed -&gt; Cama<br />
+Understand -&gt; Entender<br />
+Hate -&gt; Odiar<br />
+Bad -&gt; Malo<br />
+History -&gt; Historia<br />
+Kitchen -&gt; Cocina<br />
+Weather -&gt; Clima<br />
+Pay -&gt; Pagar<br />
+Library -&gt; Biblioteca<br />
+Popular -&gt; Popular<br />
+Health -&gt; Salud<br />
+Win -&gt; Ganar<br />
+Sweater -&gt; Suéter<br />
+Office -&gt; Oficina<br />
+Box -&gt; Caja<br />
+Graduate -&gt; Licenciarse<br />
+Terrible -&gt; Terrible<br />
+Customer -&gt; Cliente<br />
+Eye -&gt; Ojo<br />
+Concert -&gt; Concierto<br />
+Education -&gt; Educación<br />
+Headache -&gt; Dolor De Cabeza<br />
+First Name -&gt; Nombre De Pila<br />
+Who -&gt; Quién<br />
+Want -&gt; Querer<br />
+Hair -&gt; Pelo<br />
+T-Shirt -&gt; Camiseta<br />
+Dinner -&gt; Cena<br />
+Wait -&gt; Esperar<br />
+Shower -&gt; Ducha<br />
+Cake -&gt; Pastel<br />
+Water -&gt; Agua<br />
+Game -&gt; Juego<br />
+Letter -&gt; Carta<br />
+City -&gt; Ciudad<br />
+Save -&gt; Salvar<br />
+Notebook -&gt; Cuaderno<br />
+Fast -&gt; Rápido<br />
+Bathroom -&gt; Baño<br />
+Party -&gt; Fiesta<br />
+Forget -&gt; Olvidar<br />
+Sell -&gt; Vender<br />
+Floor -&gt; Piso<br />
+Dream -&gt; Sueño<br />
+Shopping -&gt; Ir De Compras<br />
+Ticket -&gt; Boleto<br />
+Cookie -&gt; Galleta<br />
+Set -&gt; Poner<br />
+Gym -&gt; Gimnasio<br />
+Sign -&gt; Señal<br />
+Mountain -&gt; Montaña<br />
+Soup -&gt; Sopa<br />
+Lamp -&gt; Lámpara<br />
+Camera -&gt; Cámara<br />
+Interview -&gt; Entrevistar<br />
+Bean -&gt; Frijol<br />
+Taxi -&gt; Taxi<br />
+Design -&gt; Diseño<br />
+Supermarket -&gt; Supermercado<br />
+Invite -&gt; Invitar<br />
+Bottle -&gt; Botella<br />
+Online -&gt; En Línea<br />
+Engineer -&gt; Ingeniero<br />
+Two -&gt; Dos<br />
+Number -&gt; Número<br />
+Zero -&gt; Cero<br />
+One -&gt; Uno<br />
+Three -&gt; Tres<br />
+Five -&gt; Cinco<br />
+Four -&gt; Cuatro<br />
+Eight -&gt; Ocho<br />
+Ten -&gt; Diez<br />
+Thirteen -&gt; Trece<br />
+Eleven -&gt; Once<br />
+Nine -&gt; Nueve<br />
+Twelve -&gt; Doce<br />
+Six -&gt; Seis<br />
+Seven -&gt; Siete<br />
+Seventeen -&gt; Diecisiete<br />
+Twenty -&gt; Veinte<br />
+Eighteen -&gt; Dieciocho<br />
+Fourteen -&gt; Catorce<br />
+Fifteen -&gt; Quince<br />
+Sixteen -&gt; Dieciséis<br />
+Nineteen -&gt; Diecinueve<br />
+Since -&gt; Desde<br />
+Enjoy -&gt; Disfrutar<br />
+Stop -&gt; Parar<br />
+Before -&gt; Antes<br />
+Promotion -&gt; Promoción<br />
+After -&gt; Después De<br />
+Birthday -&gt; Cumpleaños<br />
+Slow -&gt; Lento<br />
+Table -&gt; Mesa<br />
+Back -&gt; Espalda<br />
+Science -&gt; Ciencia<br />
+Sick -&gt; Enfermo<br />
+Window -&gt; Ventana<br />
+Newspaper -&gt; Periódico<br />
+Cereal -&gt; Cereal<br />
+Down -&gt; Abajo<br />
+Hand -&gt; Mano<br />
+Uncle -&gt; Tío<br />
+Key -&gt; Llave<br />
+Heavy -&gt; Pesado<br />
+Pants -&gt; Pantalones<br />
+Age -&gt; Edad<br />
+Glasses -&gt; Gafas<br />
+Toast -&gt; Pan Tostado<br />
+Desert -&gt; Desierto<br />
+Medicine -&gt; Medicina<br />
+China -&gt; China<br />
+Garage -&gt; Garaje<br />
+First -&gt; Primero<br />
+Second -&gt; Segundo<br />
+Fourth -&gt; Cuarto<br />
+Third -&gt; Tercero<br />
+Famous -&gt; Famoso<br />
+Sixth -&gt; Sexto<br />
+Eighth -&gt; Octavo<br />
+Seventh -&gt; Séptimo<br />
+Message -&gt; Mensaje<br />
+Turn On -&gt; Prender<br />
+Passport -&gt; Pasaporte<br />
+Brazil -&gt; Brasil<br />
+Service -&gt; Servicio<br />
+Produce -&gt; Producir<br />
+Broccoli -&gt; Brócoli<br />
+What -&gt; Qué<br />
+Think -&gt; Pensar<br />
+English -&gt; Inglés<br />
+To -&gt; A<br />
+Story -&gt; Historia<br />
+More -&gt; Más<br />
+Desk -&gt; Escritorio<br />
+Wake Up -&gt; Despertarse<br />
+Door -&gt; Puerta<br />
+Arrive -&gt; Llegar<br />
+Chocolate -&gt; Chocolate<br />
+Rain -&gt; Lluvia<br />
+Teach -&gt; Enseñar<br />
+Life -&gt; Vida<br />
+Hospital -&gt; Hospital<br />
+Experience -&gt; Experiencia<br />
+Better -&gt; Mejor<br />
+Ugly -&gt; Feo<br />
+Move -&gt; Mudarse<br />
+Twenty-Two -&gt; Veintidós<br />
+Foot -&gt; Pie<br />
+Dark -&gt; Oscuro<br />
+Twenty-Three -&gt; Veintitrés<br />
+Meeting -&gt; Reunión<br />
+Class -&gt; Clase<br />
+Twenty-One -&gt; Veintiuno<br />
+Shy -&gt; Tímido<br />
+Twenty-Seven -&gt; Veintisiete<br />
+Twenty-Eight -&gt; Veintiocho<br />
+Twenty-Four -&gt; Veinticuatro<br />
+Twenty-Five -&gt; Veinticinco<br />
+Twenty-Six -&gt; Veintiséis<br />
+Twenty-Nine -&gt; Veintinueve<br />
+Sixty -&gt; Sesenta<br />
+Eighty -&gt; Ochenta<br />
+One Hundred -&gt; Cien<br />
+Fifty -&gt; Cincuenta<br />
+Seventy -&gt; Setenta<br />
+Thousand -&gt; Mil<br />
+Ninety -&gt; Noventa<br />
+Cost -&gt; Costo<br />
+Relax -&gt; Relajarse<br />
+Email -&gt; Correo Electrónico<br />
+Wrong -&gt; Equivocado<br />
+Sunny -&gt; Soleado<br />
+Delicious -&gt; Delicioso<br />
+Million -&gt; Millón<br />
+Problem -&gt; Problema<br />
+Lie -&gt; Mentira<br />
+Strawberry -&gt; Fresa<br />
+Neck -&gt; Cuello<br />
+Build -&gt; Construir<br />
+Lettuce -&gt; Lechuga<br />
+Technology -&gt; Tecnología<br />
+Chef -&gt; Chef<br />
+Bicycle -&gt; Bicicleta<br />
+Finger -&gt; Dedo<br />
+Nervous -&gt; Nervioso<br />
+Cash -&gt; Dinero En Efectivo<br />
+Magazine -&gt; Revista<br />
+Promise -&gt; Promesa<br />
+Excellent -&gt; Excelente<br />
+Market -&gt; Mercado<br />
+Australia -&gt; Australia<br />
+Dentist -&gt; Dentista<br />
+Italian -&gt; Italiano<br />
+Go Out -&gt; Salir<br />
+Turn Off -&gt; Apagar<br />
+Expand -&gt; Expandir<br />
+Convenient -&gt; Conveniente<br />
+Japan -&gt; Japón<br />
+Progress -&gt; Progreso<br />
+People -&gt; Gente<br />
+Fun -&gt; Diversión<br />
+Because -&gt; Porque<br />
+Name -&gt; Nombre<br />
+Remember -&gt; Recordar<br />
+Dog -&gt; Perro<br />
+Spanish -&gt; Español<br />
+Pizza -&gt; Pizza<br />
+Hat -&gt; Sombrero<br />
+Awesome -&gt; Impresionante<br />
+Pencil -&gt; Lápiz<br />
+Snow -&gt; Nieve<br />
+Candy -&gt; Dulce<br />
+Practice -&gt; Practicar<br />
+Arm -&gt; Brazo<br />
+Nose -&gt; Nariz<br />
+Very -&gt; Muy<br />
+Swimming -&gt; Natación<br />
+Yet -&gt; Todavía<br />
+Street -&gt; Calle<br />
+Mirror -&gt; Espejo<br />
+Leg -&gt; Pierna<br />
+Clock -&gt; Reloj<br />
+Dictionary -&gt; Diccionario<br />
+Oil -&gt; Aceite<br />
+Just -&gt; Solo<br />
+Stand -&gt; Estar De Pie<br />
+Might -&gt; Poder<br />
+Lake -&gt; Lago<br />
+News -&gt; Noticias<br />
+Catch -&gt; Agarrar<br />
+Salad -&gt; Ensalada<br />
+Wallet -&gt; Cartera<br />
+Single -&gt; Soltero<br />
+Knee -&gt; Rodilla<br />
+Receive -&gt; Recibir<br />
+Flight -&gt; Vuelo<br />
+Fail -&gt; Fallar<br />
+Embarrassed -&gt; Avergonzado<br />
+Worried -&gt; Preocupado<br />
+Cooking -&gt; Cocina<br />
+Sunglasses -&gt; Gafas De Sol<br />
+Bite -&gt; Morder<br />
+Decision -&gt; Decisión<br />
+Disappointed -&gt; Decepcionado<br />
+Rent -&gt; Alquilar<br />
+Musician -&gt; Músico<br />
+Guest -&gt; Invitado<br />
+Chinese -&gt; Chino<br />
+Report -&gt; Informe<br />
+Plant -&gt; Plantar<br />
+Benefit -&gt; Beneficio<br />
+Grandparents -&gt; Abuelos<br />
+Temperature -&gt; Temperatura<br />
+Employee -&gt; Empleado<br />
+Budget -&gt; Presupuesto<br />
+Manage -&gt; Dirigir<br />
+Film -&gt; Película<br />
+Last Name -&gt; Apellido<br />
+Definitely -&gt; Definitivamente<br />
+Earthquake -&gt; Terremoto<br />
+Fever -&gt; Fiebre<br />
+Generous -&gt; Generoso<br />
+Lend -&gt; Prestar<br />
+Printer -&gt; Impresora<br />
+Cabinet -&gt; Armario<br />
+Fee -&gt; Cuota<br />
+Annoyed -&gt; Molesto<br />
+Carefully -&gt; Con Cuidado<br />
+Transportation -&gt; Transportación<br />
+Motorcycle -&gt; Motocicleta<br />
+Traffic -&gt; Tráfico<br />
+Interested -&gt; Interesado<br />
+Reduce -&gt; Reducir<br />
+Diet -&gt; Dieta<br />
+Architect -&gt; Arquitecto<br />
+Go Shopping -&gt; Ir De Compras<br />
+Reception -&gt; Recepción<br />
+Drugstore -&gt; Farmacia<br />
+Invitation -&gt; Invitación<br />
+Have Breakfast -&gt; Desayunar<br />
+Basketball -&gt; Baloncesto<br />
+Sad -&gt; Triste<br />
+No -&gt; No<br />
+So -&gt; Tan<br />
+Take Photos -&gt; Tomar Fotos<br />
+Cousin -&gt; Primo<br />
+Anything -&gt; Cualquier Cosa<br />
+Too -&gt; También<br />
+Fat -&gt; Gordo<br />
+Move -&gt; Mover<br />
+Answer -&gt; Responder A<br />
+Best -&gt; Mejor<br />
+Bring -&gt; Traer<br />
+Sea -&gt; Mar<br />
+Dirty -&gt; Sucio<br />
+Cat -&gt; Gato<br />
+Out -&gt; Fuera<br />
+Check -&gt; Revisar<br />
+Smile -&gt; Sonreír<br />
+Type -&gt; Teclear<br />
+Thanks -&gt; Gracias<br />
+Up -&gt; Arriba<br />
+Beach -&gt; Playa<br />
+Woman -&gt; Mujer<br />
+Soccer -&gt; Fútbol<br />
+Begin -&gt; Empezar<br />
+Painting -&gt; Pintura<br />
+Present -&gt; Regalo<br />
+Glass -&gt; Vaso<br />
+Relationship -&gt; Relación<br />
+Grow -&gt; Crecer<br />
+Mexico -&gt; México<br />
+Boss -&gt; Jefe<br />
+Own -&gt; Ser Dueño De<br />
+Serious -&gt; Serio<br />
+Spain -&gt; España<br />
+End -&gt; Fin<br />
+Gift -&gt; Regalo<br />
+World -&gt; Mundo<br />
+Internet -&gt; Internet<br />
+Radio -&gt; Radio<br />
+Slowly -&gt; Despacio<br />
+Salt -&gt; Sal<br />
+Belt -&gt; Cinturón<br />
+Question -&gt; Pregunta<br />
+Climb -&gt; Escalar<br />
+Mouse -&gt; Ratón<br />
+Stomach -&gt; Estómago<br />
+Drama -&gt; Drama<br />
+France -&gt; Francia<br />
+Orange Juice -&gt; Jugo De Naranja<br />
+Price -&gt; Precio<br />
+Translate -&gt; Traducir<br />
+Show -&gt; Mostrar<br />
+Band -&gt; Banda<br />
+Neighbor -&gt; Vecino<br />
+Both -&gt; Ambos<br />
+With -&gt; Con<br />
+Everyone -&gt; Todos<br />
+Something -&gt; Algo<br />
+My -&gt; Mi<br />
+Of -&gt; De<br />
+Word -&gt; Palabra<br />
+Room -&gt; Habitación<br />
+Television -&gt; Televisión<br />
+Sorry -&gt; Arrepentido<br />
+If -&gt; Si<br />
+Left -&gt; Izquierda<br />
+Or -&gt; O<br />
+Yes -&gt; Sí<br />
+Fish -&gt; Pez<br />
+There -&gt; Ahí<br />
+Why -&gt; Por Qué<br />
+Soon -&gt; Pronto<br />
+How -&gt; Cómo<br />
+Now -&gt; Ahora<br />
+Maybe -&gt; Tal Vez<br />
+Here -&gt; Aquí<br />
+Free -&gt; Gratis<br />
+All -&gt; Todo<br />
+Many -&gt; Muchos<br />
+Little -&gt; Poco<br />
+Next -&gt; Próximo<br />
+Pronunciation -&gt; Pronunciación<br />
+Strong -&gt; Fuerte<br />
+Welcome -&gt; Bienvenido<br />
+Back -&gt; Trasero<br />
+Feed -&gt; Alimentar<br />
+Ball -&gt; Pelota<br />
+Boat -&gt; Barco<br />
+Pig -&gt; Cerdo<br />
+Crazy -&gt; Loco<br />
+Beginning -&gt; Principio<br />
+Jump -&gt; Saltar<br />
+Thought -&gt; Pensamiento<br />
+Wild -&gt; Salvaje<br />
+Area -&gt; Área<br />
+Include -&gt; Incluir<br />
+Rock -&gt; Roca<br />
+Hide -&gt; Esconder<br />
+Regular -&gt; Regular<br />
+Paella -&gt; Paella<br />
+Leaf -&gt; Hoja<br />
+Deserve -&gt; Merecer<br />
+Pregnant -&gt; Embarazada<br />
+Taco -&gt; Taco<br />
+Square -&gt; Cuadrado<br />
+Period -&gt; Periodo<br />
+Stage -&gt; Escenario<br />
+Spider -&gt; Raña<br />
+Example -&gt; Ejemplo<br />
+Final -&gt; Final<br />
+Napkin -&gt; Servilleta<br />
+Alive -&gt; Vivo<br />
+Elephant -&gt; Elefante<br />
+Cast -&gt; Yeso<br />
+Normal -&gt; Normal<br />
+Society -&gt; Sociedad<br />
+Liar -&gt; Mentiroso<br />
+Lack -&gt; Falta<br />
+Fill -&gt; Llenar<br />
+Active -&gt; Activo<br />
+Recognize -&gt; Reconocer<br />
+Butterfly -&gt; Mariposa<br />
+Round -&gt; Redondo<br />
+Soul -&gt; Alma<br />
+Passion -&gt; Pasión<br />
+Crime -&gt; Crimen<br />
+Wolf -&gt; Lobo<br />
+Guide -&gt; Guía<br />
+Tree -&gt; Árbol<br />
+Tool -&gt; Herramienta<br />
+Candle -&gt; Vela<br />
+Reliable -&gt; Fiable<br />
+Bike -&gt; Bici<br />
+Steal -&gt; Robar<br />
+Neither -&gt; Ni<br />
+Lemon -&gt; Limón<br />
+Prepare -&gt; Preparar<br />
+Careful -&gt; Cuidadoso<br />
+Rug -&gt; Alfombra<br />
+Entertainment -&gt; Entretenimiento<br />
+Toe -&gt; Dedo Del Pie<br />
+Safety -&gt; Seguridad<br />
+Honest -&gt; Honesto<br />
+Flood -&gt; Inundación<br />
+Appearance -&gt; Aspecto<br />
+Promote -&gt; Ascender<br />
+Crowded -&gt; Lleno<br />
+Japanese -&gt; Japonés<br />
+Phone Number -&gt; Número De Teléfono<br />
+Hire -&gt; Contratar<br />
+Accident -&gt; Accidente<br />
+Independent -&gt; Independiente<br />
+Cabbage -&gt; Repollo<br />
+Card -&gt; Tarjeta<br />
+Flu -&gt; Gripe<br />
+Stressful -&gt; Estresante<br />
+Press -&gt; Apretar<br />
+Security -&gt; Seguridad<br />
+Activity -&gt; Actividad<br />
+Chat -&gt; Charlar<br />
+Shoe -&gt; Zapato<br />
+Thumb -&gt; Pulgar<br />
+Violent -&gt; Violento<br />
+Volleyball -&gt; Voleibol<br />
+Mean -&gt; Significar<br />
+Song -&gt; Canción<br />
+Ring -&gt; Anillo<br />
+While -&gt; Mientras<br />
+Married -&gt; Casado<br />
+But -&gt; Pero<br />
+And -&gt; Y<br />
+A Lot -&gt; Mucho<br />
+Hear -&gt; Oír<br />
+Close -&gt; Cerrar<br />
+Handsome -&gt; Guapo<br />
+Last -&gt; Último<br />
+Mexican -&gt; Mexicano<br />
+Face -&gt; Cara<br />
+Hit -&gt; Golpear<br />
+Match -&gt; Partido<br />
+Early -&gt; Temprano<br />
+Keep -&gt; Guardar<br />
+Corn -&gt; Maíz<br />
+Fine -&gt; Multa<br />
+Man -&gt; Hombre<br />
+Hungry -&gt; Hambriento<br />
+Performance -&gt; Rendimiento<br />
+Fire -&gt; Fuego<br />
+Glove -&gt; Guante<br />
+Fly -&gt; Volar<br />
+Wall -&gt; Muro<br />
+Sneaker -&gt; Zapato Deportivo<br />
+Store -&gt; Tienda<br />
+Sock -&gt; Calcetín<br />
+Jar -&gt; Frasco<br />
+Novel -&gt; Novela<br />
+Fight -&gt; Pelea<br />
+Completely -&gt; Completamente<br />
+Retire -&gt; Jubilarse<br />
+Battery -&gt; Batería<br />
+Smart -&gt; Inteligente<br />
+Positive -&gt; Positivo<br />
+Russia -&gt; Rusia<br />
+Fall In Love -&gt; Enamorarse De<br />
+Mechanic -&gt; Mecánico<br />
+Firefighter -&gt; Bombero<br />
+Nationality -&gt; Nacionalidad<br />
+Bookcase -&gt; Biblioteca<br />
+Art -&gt; Arte<br />
+Flight Attendant -&gt; Auxiliar De Vuelo<br />
+Yoga -&gt; Yoga<br />
+Unfriendly -&gt; Antipático<br />
+Roast -&gt; Asar<br />
+Department Store -&gt; Tienda Por Departamentos<br />
+Email Address -&gt; Email<br />
+Receptionist -&gt; Recepcionista<br />
+Blog -&gt; Blog<br />
+Turn Down -&gt; Rechazar<br />
+Have Children -&gt; Tener Hijos<br />
+Bus Station -&gt; Estación De Autobuses<br />
+High -&gt; Alto<br />
+Environment -&gt; Medioambiente<br />
+Curly Hair -&gt; Pelo Rizado</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="5" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Intermedio</h2>
+<p>Successful -&gt; Exitoso<br />
+Steak -&gt; Bistec<br />
+Confident -&gt; Seguro De Sí Mismo<br />
+Trial -&gt; Juicio<br />
+Task -&gt; Tarea<br />
+Anxiety -&gt; Ansiedad<br />
+Straight Hair -&gt; Pelo Liso<br />
+Director -&gt; Director<br />
+Awkward -&gt; Torpe<br />
+Fence -&gt; Valla<br />
+Play Sports -&gt; Practicar Deporte<br />
+Spread -&gt; Difundir<br />
+Request -&gt; Pedir<br />
+Journey -&gt; Viajar<br />
+Lamb -&gt; Cordero<br />
+Subject -&gt; Tema<br />
+Approach -&gt; Acercarse<br />
+Trade -&gt; Comercio<br />
+Chin -&gt; Mentón<br />
+Murder -&gt; Asesinato<br />
+Speech -&gt; Discurso<br />
+Soft -&gt; Suave<br />
+Serve -&gt; Servir<br />
+Heat -&gt; Calor<br />
+Hiking -&gt; Excursionismo<br />
+Handle -&gt; Manejar<br />
+Master -&gt; Dominar<br />
+Disgusting -&gt; Asqueroso<br />
+Quite -&gt; Totalmente<br />
+Middle School -&gt; Escuela Secundaria<br />
+Tight -&gt; Apretado<br />
+Expect -&gt; Esperar<br />
+Leather -&gt; Cuero<br />
+Sensible -&gt; Sensato<br />
+Movie Theater -&gt; Cine<br />
+Outgoing -&gt; Extrovertido<br />
+Mall -&gt; Centro Comercial<br />
+Organized -&gt; Organizado<br />
+Vest -&gt; Chaleco<br />
+Achieve -&gt; Lograr<br />
+Driving -&gt; Manejo<br />
+Treatment -&gt; Tratamiento<br />
+Stadium -&gt; Estadio<br />
+Entertaining -&gt; Divertido<br />
+Chalkboard -&gt; Pizarra<br />
+Available -&gt; Disponible<br />
+Playground -&gt; Patio De Recreo<br />
+Foreign -&gt; Extranjero<br />
+Application -&gt; Solicitud<br />
+Lift -&gt; Levantar<br />
+Be Able To -&gt; Poder<br />
+Audience -&gt; Público<br />
+Equipment -&gt; Equipo<br />
+Toothbrush -&gt; Cepillo De Dientes<br />
+Bracelet -&gt; Pulsera<br />
+Willing -&gt; Dispuesto<br />
+Growth -&gt; Crecimiento<br />
+Current -&gt; Actual<br />
+Appreciate -&gt; Agradecer<br />
+Tip -&gt; Propina<br />
+Measure -&gt; Medir<br />
+Advertisement -&gt; Anuncio<br />
+Deliver -&gt; Entregar<br />
+Ankle -&gt; Tobillo<br />
+Beat -&gt; Batir<br />
+Reach -&gt; Alcanzar<br />
+Poverty -&gt; Pobreza<br />
+Get Dressed -&gt; Vestirse<br />
+Wool -&gt; Lana<br />
+Microwave -&gt; Microondas<br />
+Village -&gt; Pueblo<br />
+Bake -&gt; Hornear<br />
+Tuna -&gt; Atún<br />
+Bow -&gt; Lazo<br />
+Luggage -&gt; Equipaje<br />
+Photographer -&gt; Fotógrafo<br />
+Swimsuit -&gt; Traje De Baño<br />
+Helmet -&gt; Casco<br />
+Narrow -&gt; Estrecho<br />
+Drought -&gt; Sequía<br />
+Hip -&gt; Cadera<br />
+Pharmacy -&gt; Farmacia<br />
+Look Up -&gt; Buscar<br />
+Exchange -&gt; Intercambio<br />
+Blouse -&gt; Blusa<br />
+Crowd -&gt; Multitud<br />
+Prove -&gt; Probar<br />
+Blame -&gt; Culpa<br />
+Dull -&gt; Aburrido<br />
+Grill -&gt; Parrilla<br />
+Stand Out -&gt; Sobresalir<br />
+Relaxed -&gt; Relajado<br />
+Gain  -&gt; Ganar<br />
+Realize  -&gt; Darse Cuenta De<br />
+Board -&gt; Tabla<br />
+Fireplace -&gt; Chimenea<br />
+Attach -&gt; Sujetar<br />
+Afford -&gt; Permitirse<br />
+Affordable -&gt; Económico<br />
+Uncomfortable -&gt; Incómodo<br />
+Challenging -&gt; Retador<br />
+Regret -&gt; Arrepentirse De<br />
+Illegal -&gt; Ilegal<br />
+Salmon -&gt; Salmón<br />
+Illness -&gt; Enfermedad<br />
+Server -&gt; Camarero<br />
+Tissue -&gt; Pañuelo De Papel<br />
+Proof -&gt; Prueba<br />
+Dizzy -&gt; Mareado<br />
+Fried -&gt; Frito<br />
+Parking Lot -&gt; Estacionamiento<br />
+Sweat -&gt; Sudar<br />
+Poetry -&gt; Poesía<br />
+Evidence -&gt; Pruebas<br />
+Log -&gt; Tronco<br />
+Cinema -&gt; Cine<br />
+Bilingual -&gt; Bilingüe<br />
+Election -&gt; Elecciones<br />
+Lively -&gt; Animado<br />
+Compete -&gt; Competir<br />
+Chop -&gt; Cortar<br />
+Earring -&gt; Arete<br />
+Relative -&gt; Pariente<br />
+Practical -&gt; Práctico<br />
+Trend -&gt; Tendencia<br />
+Absent -&gt; Ausente<br />
+Impatient -&gt; Impaciente<br />
+Elderly -&gt; Mayor<br />
+Spare -&gt; Repuesto<br />
+Engagement -&gt; Compromiso<br />
+Dress Up -&gt; Ponerse Elegante<br />
+Discovery -&gt; Descubrimiento<br />
+Slow Down -&gt; Reducir La Velocidad<br />
+Condition -&gt; Estado<br />
+Carton -&gt; Cartón<br />
+Eat Breakfast -&gt; Desayunar<br />
+Mobile -&gt; Móvil<br />
+Refund -&gt; Reembolso<br />
+Swollen -&gt; Hinchado<br />
+Enthusiastic -&gt; Entusiasmado<br />
+Jog -&gt; Hacer Jogging<br />
+Absolutely -&gt; Absolutamente<br />
+Frightening -&gt; Espantoso<br />
+Allergy -&gt; Alergia<br />
+Vomit -&gt; Vomitar<br />
+Lease -&gt; Contrato De Arrendamiento<br />
+Dump -&gt; Vertedero<br />
+Referee -&gt; Árbitro<br />
+Medication -&gt; Medicamento<br />
+Put Away -&gt; Guardar<br />
+Lane -&gt; Carril<br />
+Postcard -&gt; Tarjeta Postal<br />
+Alike -&gt; Parecido<br />
+Careless -&gt; Descuidado<br />
+Stiff -&gt; Duro<br />
+Bonus -&gt; Plus<br />
+Grain -&gt; Grano<br />
+Depressing -&gt; Deprimente<br />
+Ferry -&gt; Transbordador<br />
+Innovative -&gt; Innovador<br />
+Terrific -&gt; Estupendo<br />
+Exhibition -&gt; Exposición<br />
+Try On -&gt; Probarse<br />
+Postpone -&gt; Posponer<br />
+Overweight -&gt; Con Sobrepeso<br />
+Go To The Beach -&gt; Ir A La Playa<br />
+Unemployed -&gt; Desempleado<br />
+Seat Belt -&gt; Cinturón De Seguridad<br />
+Windshield -&gt; Parabrisas<br />
+Impolite -&gt; Descortés<br />
+Symptom -&gt; Síntoma<br />
+Laundromat -&gt; Lavandería Automática<br />
+Full-Time -&gt; A Tiempo Completo<br />
+Suburb -&gt; Barrio Periférico<br />
+Dishonest -&gt; Deshonesto<br />
+Thrilled -&gt; Entusiasmado<br />
+Cut Off -&gt; Cortar<br />
+Capacity -&gt; Capacidad<br />
+Bizarre -&gt; Extraño<br />
+Fill In -&gt; Rellenar<br />
+Motorbike -&gt; Moto<br />
+Pretty Good -&gt; Bastante Bueno<br />
+Egyptian -&gt; Egipcio<br />
+Get Into -&gt; Entrar A<br />
+Computer Lab -&gt; Sala De Computación<br />
+Incredibly -&gt; Increíblemente<br />
+Do The Laundry -&gt; Lavar La Ropa<br />
+Information Technology -&gt; Informática<br />
+Get Up Early -&gt; Madrugar<br />
+Suitcase -&gt; Maleta<br />
+Thought-Provoking -&gt; Estimulante<br />
+Flat -&gt; Plano<br />
+Good-Looking -&gt; Guapo<br />
+Melt -&gt; Derretirse<br />
+Remain -&gt; Permanecer<br />
+Break Into -&gt; Entrar En<br />
+Get Around -&gt; Moverse<br />
+Listen To The Radio -&gt; Escuchar La Radio<br />
+Care -&gt; Preocuparse<br />
+Get Divorced -&gt; Divorciarse<br />
+Field -&gt; Campo<br />
+Shopping Mall -&gt; Centro Comercial<br />
+Not -&gt; No<br />
+Prescription -&gt; Receta<br />
+Social Networking -&gt; Redes Sociales<br />
+Road -&gt; Camino<br />
+Straight -&gt; Derecho<br />
+Pillow -&gt; Almohada<br />
+Running -&gt; Correr<br />
+Movies -&gt; Cine<br />
+Thanksgiving -&gt; Día De Acción De Gracias<br />
+Remove -&gt; Quitar<br />
+Rabbit -&gt; Conejo<br />
+Pour -&gt; Verter<br />
+Quit -&gt; Dejar<br />
+Walking -&gt; Ambulante<br />
+Be Born -&gt; Nacer<br />
+Insurance -&gt; Seguro<br />
+Notice -&gt; Aviso<br />
+Shot -&gt; Inyección<br />
+None -&gt; Ninguno<br />
+Bill -&gt; Cuenta<br />
+Stand Up -&gt; Ponerse De Pie<br />
+Along -&gt; A Lo Largo De<br />
+Fewer -&gt; Menos<br />
+Carpet -&gt; Alfombra<br />
+Throat -&gt; Garganta<br />
+Risk -&gt; Riesgo<br />
+Diverse -&gt; Diverso<br />
+Loose -&gt; Suelto<br />
+Directions -&gt; Indicaciones<br />
+Succeed -&gt; Tener Éxito<br />
+Delay -&gt; Retraso<br />
+Pear -&gt; Pera<br />
+Counter -&gt; Mostrador<br />
+Skate -&gt; Patinar<br />
+Mature -&gt; Maduro<br />
+Look For -&gt; Buscar<br />
+Wisdom -&gt; Sabiduría<br />
+Demand -&gt; Exigir<br />
+Fur -&gt; Piel<br />
+Eyebrow -&gt; Ceja<br />
+Dresser -&gt; Tocador<br />
+Pound -&gt; Libra<br />
+Hall -&gt; Vestíbulo<br />
+Highlight -&gt; Resaltar<br />
+Monitor -&gt; Monitor<br />
+Appointment -&gt; Cita<br />
+Perfume -&gt; Perfume<br />
+Majority -&gt; Mayoría<br />
+Homeless -&gt; Sin Hogar<br />
+Equal -&gt; Igual<br />
+Gymnastic -&gt; Gimnasia<br />
+Fit -&gt; Quedar Bien<br />
+Passionate -&gt; Apasionado<br />
+Citizen -&gt; Ciudadano<br />
+Tortilla -&gt; Tortilla<br />
+Response -&gt; Respuesta<br />
+Unknown -&gt; Desconocido<br />
+Series -&gt; Serie<br />
+Previous -&gt; Anterior<br />
+Raw -&gt; Crudo<br />
+Advanced -&gt; Avanzado<br />
+Youth -&gt; Juventud<br />
+Complex -&gt; Complejo<br />
+Olive -&gt; Aceituna<br />
+Semester -&gt; Semestre<br />
+Surface -&gt; Superficie<br />
+Odd -&gt; Extraño<br />
+Barbecue -&gt; Parrillada<br />
+Spend Time -&gt; Pasar Tiempo<br />
+Gang -&gt; Banda<br />
+Wheat -&gt; Trigo<br />
+Rush -&gt; Prisa<br />
+Bother -&gt; Molestar<br />
+Witness -&gt; Testigo<br />
+Item -&gt; Artículo<br />
+Take Care Of -&gt; Encargarse De<br />
+Trunk -&gt; Tronco<br />
+Purchase -&gt; Comprar<br />
+Bark -&gt; Ladrar<br />
+Difference -&gt; Diferencia<br />
+Alarm Clock -&gt; Despertador<br />
+Leadership -&gt; Liderazgo<br />
+Spill -&gt; Derramar<br />
+Species -&gt; Especie<br />
+Countryside -&gt; Campo<br />
+Mild -&gt; Suave<br />
+Portuguese -&gt; Portugués<br />
+Hairdresser -&gt; Peluquero<br />
+Look Forward To -&gt; Tener Muchas Ganas De<br />
+Ban -&gt; Prohibir<br />
+Sadly -&gt; Desgraciadamente<br />
+Salty -&gt; Salado<br />
+Silk -&gt; Seda<br />
+Sprain -&gt; Torcerse<br />
+Humid -&gt; Húmedo<br />
+Establish -&gt; Establecer<br />
+Stamp -&gt; Sello<br />
+Wealthy -&gt; Rico<br />
+Cliff -&gt; Acantilado<br />
+Horn -&gt; Claxon<br />
+Cupboard -&gt; Alacena<br />
+Depression -&gt; Depresión<br />
+Sponsor -&gt; Patrocinador<br />
+Threaten -&gt; Amenazar<br />
+Slim -&gt; Delgado<br />
+Required -&gt; Obligatorio<br />
+Fry -&gt; Freír<br />
+Departure -&gt; Salida<br />
+Psychologist -&gt; Psicólogo<br />
+Invest -&gt; Invertir<br />
+Chore -&gt; Quehacer<br />
+Charming -&gt; Encantador<br />
+Investment -&gt; Inversión<br />
+Adjective -&gt; Adjetivo<br />
+Sew -&gt; Coser<br />
+Mug -&gt; Taza<br />
+Take A Bath -&gt; Bañarse<br />
+Wound -&gt; Herida<br />
+Too Many -&gt; Demasiados<br />
+Concerned -&gt; Preocupado<br />
+Entrepreneur -&gt; Empresario<br />
+Grandchild -&gt; Nieto<br />
+Orchestra  -&gt; Orquesta<br />
+Forecast -&gt; Pronóstico<br />
+Generally -&gt; En General<br />
+Throw Away -&gt; Tirar<br />
+Sympathy -&gt; Compasión<br />
+Honesty -&gt; Honradez<br />
+Hometown -&gt; Ciudad Natal<br />
+Grilled -&gt; A La Parrilla<br />
+Freak -&gt; Monstruo<br />
+Fashionable -&gt; De Moda<br />
+Mortgage -&gt; Hipoteca<br />
+Biscuit -&gt; Panecillo<br />
+Overwhelm -&gt; Abrumar<br />
+Extremely -&gt; Sumamente<br />
+Intend -&gt; Tener La Intención De<br />
+Nearly -&gt; Casi<br />
+Arabic -&gt; Árabe<br />
+Haircut -&gt; Corte De Pelo<br />
+Conservative -&gt; Conservador<br />
+Hold On -&gt; Esperar<br />
+Landlord -&gt; Dueño<br />
+Registration -&gt; Matriculación<br />
+Logo -&gt; Logotipo<br />
+Apparently -&gt; Al Parecer<br />
+Rhythm -&gt; Ritmo<br />
+Track -&gt; Pista<br />
+Mango -&gt; Mango<br />
+Bridge -&gt; Puente<br />
+Ever -&gt; Alguna Vez<br />
+Able -&gt; Capaz<br />
+Necklace -&gt; Collar<br />
+Yard -&gt; Patio<br />
+Ship -&gt; Barco<br />
+Turkey -&gt; Pavo<br />
+Owner -&gt; Dueño<br />
+Wonder -&gt; Preguntarse<br />
+Tour -&gt; Recorrido<br />
+Trash -&gt; Basura<br />
+Scary -&gt; De Miedo<br />
+Mushroom -&gt; Hongo<br />
+Whole -&gt; Entero<br />
+Bowl -&gt; Bol<br />
+Forest -&gt; Bosque<br />
+Sharp -&gt; Afilado<br />
+Oven -&gt; Horno<br />
+Garden -&gt; Jardín<br />
+Enter -&gt; Entrar En<br />
+Power -&gt; Poder<br />
+Wind -&gt; Viento<br />
+Score -&gt; Puntuación<br />
+Degree -&gt; Grado<br />
+Furthermore -&gt; Además<br />
+Athletic -&gt; Atlético<br />
+Wave -&gt; Ola<br />
+Tourist -&gt; Turista<br />
+Loss -&gt; Pérdida<br />
+Judge -&gt; Juez<br />
+Population -&gt; Población<br />
+England -&gt; Inglaterra<br />
+Rubber -&gt; Goma<br />
+Appear -&gt; Aparecer<br />
+Decorate -&gt; Decorar<br />
+Government -&gt; Gobierno<br />
+Plane -&gt; Avión<br />
+Account -&gt; Cuenta<br />
+Chemistry -&gt; Química<br />
+Form -&gt; Formulario<br />
+Strict -&gt; Estricto<br />
+Talented -&gt; Talentoso<br />
+Unhealthy -&gt; Poco Saludable<br />
+Describe -&gt; Describir<br />
+Belief -&gt; Creencia<br />
+Classroom -&gt; Aula<br />
+Tasty -&gt; Sabroso<br />
+Ability -&gt; Habilidad<br />
+Title -&gt; Título<br />
+Classical Music -&gt; Música Clásica<br />
+Eraser -&gt; Borrador<br />
+Basement -&gt; Sótano<br />
+Brother-In-Law -&gt; Cuñado<br />
+Remind -&gt; Recordar<br />
+Principal -&gt; Director<br />
+Go Swimming -&gt; Ir A Nadar<br />
+Seem -&gt; Parecer<br />
+Pancake -&gt; Panqueque<br />
+Elbow -&gt; Codo<br />
+Post -&gt; Publicar<br />
+Sale -&gt; Venta<br />
+Throw -&gt; Tirar<br />
+Receipt -&gt; Recibo<br />
+Valuable -&gt; Valioso<br />
+Gas Station -&gt; Gasolinera<br />
+Repair -&gt; Reparar<br />
+Jogging -&gt; Jogging<br />
+Get Along -&gt; Llevarse Bien<br />
+Look Like -&gt; Parecerse A<br />
+Get On -&gt; Subirse<br />
+Payment -&gt; Pago<br />
+Babysit -&gt; Cuidar Niños<br />
+Look At -&gt; Mirar<br />
+Cannot -&gt; No Poder<br />
+Invention -&gt; Invento<br />
+Noodle -&gt; Fideo<br />
+Get Together -&gt; Juntar<br />
+Keep In Touch -&gt; Mantenerse En Contacto<br />
+Vitamin -&gt; Vitamina<br />
+Employment -&gt; Empleo<br />
+Korean -&gt; Coreano<br />
+Hang Up -&gt; Colgar<br />
+Manufacture -&gt; Fabricar<br />
+Sandal -&gt; Sandalia<br />
+Already -&gt; Ya<br />
+Release -&gt; Liberar<br />
+Windy -&gt; Ventoso<br />
+Hug -&gt; Abrazo<br />
+Excuse -&gt; Excusa<br />
+Away -&gt; Lejos<br />
+Sheep -&gt; Oveja<br />
+Cup -&gt; Taza<br />
+Knowledge -&gt; Conocimiento<br />
+Rest -&gt; Descansar<br />
+Background -&gt; Fondo<br />
+Spell -&gt; Deletrear<br />
+Location -&gt; Ubicación<br />
+Cucumber -&gt; Pepino<br />
+Lesson -&gt; Lección<br />
+Mistake -&gt; Error<br />
+Program -&gt; Programa<br />
+Garlic -&gt; Ajo<br />
+Brown Hair -&gt; Cabello Castaño<br />
+Survey -&gt; Encuesta<br />
+Medical -&gt; Médico<br />
+Argument -&gt; Discusión<br />
+Avoid -&gt; Evitar<br />
+Earn -&gt; Ganar<br />
+Staff -&gt; Personal<br />
+Goal -&gt; Meta<br />
+Dining Room -&gt; Comedor<br />
+Strike -&gt; Huelga<br />
+Drain -&gt; Vaciar<br />
+Pollution -&gt; Contaminación<br />
+Lightning -&gt; Relámpago<br />
+Restroom -&gt; Baño<br />
+Contract -&gt; Contrato<br />
+Festival -&gt; Festival<br />
+Profit -&gt; Ganancias<br />
+Moving -&gt; Conmovedor<br />
+Badly -&gt; Mal<br />
+Foggy -&gt; Neblinoso<br />
+Brand -&gt; Marca<br />
+Grapefruit -&gt; Toronja<br />
+Steam -&gt; Vapor<br />
+Brush -&gt; Cepillo<br />
+Above -&gt; Encima De<br />
+Going -&gt; Partida<br />
+Hardworking -&gt; Trabajador<br />
+Old-Fashioned -&gt; Pasado De Moda<br />
+Unfortunately -&gt; Desafortunadamente<br />
+Training -&gt; Entrenamiento<br />
+Work Experience -&gt; Experiencia Laboral<br />
+Raise -&gt; Levantar<br />
+Remedy -&gt; Remedio<br />
+Phone Call -&gt; Llamada<br />
+Backache -&gt; Dolor De Espalda<br />
+Pack -&gt; Empacar<br />
+Drop -&gt; Dejar Caer<br />
+Thirsty -&gt; Sediento<br />
+Go Dancing -&gt; Ir A Bailar<br />
+Huge -&gt; Enorme<br />
+Painkiller -&gt; Analgésico<br />
+Plain -&gt; Sencillo<br />
+Factory -&gt; Fábrica<br />
+Agreement -&gt; Acuerdo<br />
+Shave -&gt; Afeitarse<br />
+Discuss -&gt; Discutir<br />
+Bathtub -&gt; Bañera<br />
+Quality -&gt; Calidad<br />
+Pretend -&gt; Fingir<br />
+Scratch -&gt; Arañazo<br />
+Development -&gt; Desarrollo<br />
+Laundry -&gt; Ropa Sucia<br />
+Fitness -&gt; Forma Física<br />
+Bargain -&gt; Ganga<br />
+Financial -&gt; Financiero<br />
+Sunscreen -&gt; Protector Solar<br />
+Done -&gt; Listo<br />
+Effective -&gt; Eficaz<br />
+Campaign -&gt; Campaña<br />
+Deny -&gt; Negar<br />
+Debt -&gt; Deuda<br />
+Arrest -&gt; Detener<br />
+Colleague -&gt; Colega<br />
+Sneeze -&gt; Estornudo<br />
+Exhausted -&gt; Exhausto<br />
+Frightened -&gt; Asustado<br />
+Join -&gt; Juntar<br />
+Ambitious -&gt; Ambicioso<br />
+Dairy -&gt; Lácteos<br />
+Counselor -&gt; Consejero<br />
+Briefcase -&gt; Maletín<br />
+Get Over -&gt; Recuperarse De<br />
+Persuade -&gt; Convencer<br />
+Quickly -&gt; Rápidamente<br />
+Enormous -&gt; Enorme<br />
+Jealous -&gt; Celoso<br />
+Electronics -&gt; Electrónica<br />
+Carry -&gt; Cargar<br />
+Bring Up -&gt; Sacar A Relucir<br />
+Court -&gt; Corte<br />
+Volunteer -&gt; Voluntario<br />
+Hike -&gt; Caminata<br />
+Sour -&gt; Agrio<br />
+Feature -&gt; Característica<br />
+Cause -&gt; Causar<br />
+Worse -&gt; Peor<br />
+Wrist -&gt; Muñeca<br />
+Go On -&gt; Seguir<br />
+Follow -&gt; Seguir<br />
+Cook Dinner -&gt; Cocinar La Cena<br />
+German -&gt; Alemán<br />
+Keyboard -&gt; Teclado<br />
+Made -&gt; Hecho<br />
+Towel -&gt; Toalla<br />
+Mouth -&gt; Boca<br />
+Wet -&gt; Mojado<br />
+Ad -&gt; Anuncio<br />
+Soap -&gt; Jabón<br />
+Perhaps -&gt; Tal Vez<br />
+Suggest -&gt; Sugerir<br />
+Attitude -&gt; Actitud<br />
+Fireworks -&gt; Fuegos Artificiales<br />
+Costume -&gt; Disfraz<br />
+Cover -&gt; Cubrir<br />
+Iron -&gt; Planchar<br />
+Waste -&gt; Malgastar<br />
+Coach -&gt; Entrenador<br />
+Responsible -&gt; Responsable<br />
+Weird -&gt; Raro<br />
+Website -&gt; Sitio Web<br />
+Hill -&gt; Colina<br />
+Chest -&gt; Pecho<br />
+Cloudy -&gt; Nublado<br />
+French Fry -&gt; Papa Frita<br />
+Nickname -&gt; Apodo<br />
+Waitress -&gt; Camarera<br />
+Dollar -&gt; Dólar<br />
+Grandson -&gt; Nieto<br />
+Warning -&gt; Aviso<br />
+Beard -&gt; Barba<br />
+Journalist -&gt; Periodista<br />
+Pajamas -&gt; Pijama<br />
+Politics -&gt; Política<br />
+Toothpaste -&gt; Pasta De Dientes<br />
+File -&gt; Archivo<br />
+Anxious -&gt; Ansioso<br />
+Have Lunch -&gt; Almorzar<br />
+Hurricane -&gt; Huracán<br />
+Teenager -&gt; Adolescente<br />
+Take A Shower -&gt; Ducharse<br />
+Fiancé -&gt; Prometido<br />
+Talkative -&gt; Hablador<br />
+Responsibility -&gt; Responsabilidad<br />
+Switch -&gt; Cambiar<br />
+Deal With -&gt; Tratar Con<br />
+Break Up -&gt; Separarse<br />
+Hilarious -&gt; Divertidísimo<br />
+Brazilian -&gt; Brasileño<br />
+Launch -&gt; Lanzar<br />
+Electrician -&gt; Electricista<br />
+Whistle -&gt; Silbar<br />
+Dislike -&gt; Desagradar<br />
+Upload -&gt; Cargar<br />
+Permit -&gt; Permitir<br />
+Favor -&gt; Favor<br />
+Swimming Pool -&gt; Piscina<br />
+Destroy -&gt; Destruir<br />
+Decrease -&gt; Disminuir<br />
+Bald -&gt; Calvo<br />
+Theater -&gt; Teatro<br />
+Complain -&gt; Quejarse<br />
+Surprised -&gt; Sorprendido<br />
+Screen -&gt; Pantalla<br />
+Global Warming -&gt; Calentamiento Global<br />
+Gossip -&gt; Chismear<br />
+Cotton -&gt; Algodón<br />
+Bakery -&gt; Panadería<br />
+Seafood -&gt; Mariscos<br />
+Skiing -&gt; Esquí<br />
+View -&gt; Vista<br />
+Surprise -&gt; Sorpresa<br />
+Flower -&gt; Flor<br />
+Rich -&gt; Rico<br />
+Bright -&gt; Brillante<br />
+Less -&gt; Menos<br />
+Decide -&gt; Decidir<br />
+Shoulder -&gt; Hombro<br />
+Golf -&gt; Golf<br />
+Stress -&gt; Estrés<br />
+Ago -&gt; Hace<br />
+Mine -&gt; Mío<br />
+Cafeteria -&gt; Cafetería<br />
+Act -&gt; Actuar<br />
+Person -&gt; Persona<br />
+Dish -&gt; Plato<br />
+Have To -&gt; Tener Que<br />
+Useful -&gt; Útil<br />
+Prefer -&gt; Preferir<br />
+Damage -&gt; Dañar<br />
+Balance -&gt; Equilibrio<br />
+Discover -&gt; Descubrir<br />
+Smoke -&gt; Fumar<br />
+Writer -&gt; Escritor<br />
+Ski -&gt; Esquiar<br />
+Print -&gt; Imprimir<br />
+Island -&gt; Isla<br />
+Position -&gt; Posición<br />
+Material -&gt; Material<br />
+Fashion -&gt; Moda<br />
+Granddaughter -&gt; Nieta<br />
+Depressed -&gt; Deprimido<br />
+Personal -&gt; Personal<br />
+Musical -&gt; Musical<br />
+Personality -&gt; Personalidad<br />
+Tiny -&gt; Diminuto<br />
+Pilot -&gt; Piloto<br />
+Express -&gt; Expresar<br />
+Sensitive -&gt; Sensible<br />
+Copy -&gt; Copia<br />
+Cream -&gt; Crema<br />
+Balcony -&gt; Balcón<br />
+Warn -&gt; Advertir<br />
+Classmate -&gt; Compañero De Clase<br />
+Emotion -&gt; Emoción<br />
+Register -&gt; Registrar<br />
+Train Station -&gt; Estación De Tren<br />
+Station -&gt; Estación<br />
+Photograph -&gt; Fotografía<br />
+Competitive -&gt; Competitivo<br />
+Long Hair -&gt; Pelo Largo<br />
+Separate -&gt; Separar<br />
+Emergency -&gt; Emergencia<br />
+Product -&gt; Producto<br />
+Short Hair -&gt; Pelo Corto<br />
+Congratulations -&gt; Felicidades<br />
+Apartment Building -&gt; Edificio De Apartamentos<br />
+Eat Out -&gt; Comer Fuera<br />
+Reading -&gt; Lectura<br />
+Favorite -&gt; Favorito<br />
+Math -&gt; Mates<br />
+Lost -&gt; Perdido<br />
+Born -&gt; Nacido<br />
+Smell -&gt; Olor<br />
+Cry -&gt; Llorar<br />
+Town -&gt; Pueblo<br />
+Create -&gt; Crear<br />
+Silly -&gt; Tonto<br />
+Intelligent -&gt; Inteligente<br />
+Phone -&gt; Teléfono<br />
+Full -&gt; Lleno<br />
+Horrible -&gt; Horrible<br />
+Sound -&gt; Sonido<br />
+Tonight -&gt; Esta Noche<br />
+United States -&gt; Estados Unidos<br />
+Selfish -&gt; Egoísta<br />
+Continue -&gt; Continuar<br />
+Thing -&gt; Cosa<br />
+Tennis -&gt; Tenis<br />
+Law -&gt; Ley<br />
+American -&gt; Americano<br />
+Empty -&gt; Vacío<br />
+South -&gt; Sur<br />
+Video Game -&gt; Videojuego<br />
+State -&gt; Estado<br />
+Culture -&gt; Cultura<br />
+Point -&gt; Punto<br />
+Special -&gt; Especial<br />
+Project -&gt; Proyecto<br />
+Text -&gt; Texto<br />
+Yogurt -&gt; Yogur<br />
+Noise -&gt; Ruido<br />
+Professional -&gt; Profesional<br />
+Corner -&gt; Esquina<br />
+Actress -&gt; Actriz<br />
+Explain -&gt; Explicar<br />
+Exam -&gt; Examen<br />
+Rainy -&gt; Lluvioso<br />
+Accept -&gt; Aceptar<br />
+Architecture -&gt; Arquitectura<br />
+Dishwasher -&gt; Lavavajillas<br />
+Tornado -&gt; Tornado<br />
+Traditional -&gt; Tradicional<br />
+Marketing -&gt; Marketing<br />
+Solve -&gt; Resolver<br />
+India -&gt; India<br />
+Kid -&gt; Niño<br />
+Imagine -&gt; Imaginar<br />
+Solution -&gt; Solución<br />
+Written -&gt; Escrito<br />
+Communication -&gt; Comunicación<br />
+Advance -&gt; Avanzar<br />
+Politician -&gt; Político<br />
+Organize -&gt; Organizar<br />
+Contrast -&gt; Contraste<br />
+Go To School -&gt; Ir A La Escuela<br />
+Efficient -&gt; Eficiente<br />
+Cartoon -&gt; Dibujos Animados<br />
+International -&gt; Internacional<br />
+Reporter -&gt; Reportero<br />
+Unhappy -&gt; Infeliz<br />
+Miserable -&gt; Miserable<br />
+Anniversary -&gt; Aniversario<br />
+Limit -&gt; Límite<br />
+Documentary -&gt; Documental<br />
+Police Station -&gt; Estación De Policía<br />
+Aggressive -&gt; Agresivo<br />
+Get Off -&gt; Bajarse<br />
+Invent -&gt; Inventar<br />
+Driver License -&gt; Licencia De Conducir<br />
+Export -&gt; Exportar<br />
+Alternative -&gt; Alternativo<br />
+Play Soccer -&gt; Jugar Fútbol<br />
+Valentine's Day -&gt; Día De San Valentín<br />
+Get A Job -&gt; Conseguir Trabajo<br />
+Play Tennis -&gt; Jugar Al Tenis<br />
+Air -&gt; Aire<br />
+Understanding -&gt; Entendimiento<br />
+Photo -&gt; Foto<br />
+Especially -&gt; Especialmente<br />
+Video -&gt; Video<br />
+Pet -&gt; Mascota<br />
+Menu -&gt; Menú<br />
+Good Luck -&gt; Buena Suerte<br />
+Mind -&gt; Mente<br />
+Bye -&gt; Adiós<br />
+Bear -&gt; Oso<br />
+Club -&gt; Club<br />
+Guess -&gt; Adivinar<br />
+Do Homework -&gt; Hacer Tarea<br />
+Broken -&gt; Roto<br />
+Sweet -&gt; Dulce<br />
+Record -&gt; Grabar<br />
+Trust -&gt; Confiar En<br />
+Type -&gt; Tipo<br />
+Support -&gt; Apoyo<br />
+Idea -&gt; Idea<br />
+Finally -&gt; Finalmente<br />
+Watch A Movie -&gt; Ver Una Película<br />
+Die -&gt; Morir<br />
+Poor -&gt; Pobre<br />
+Weak -&gt; Débil<br />
+Animal -&gt; Animal<br />
+Heart -&gt; Corazón<br />
+Off -&gt; Apagado<br />
+Other -&gt; Otro<br />
+Complete -&gt; Completar<br />
+Wash -&gt; Lavar<br />
+Bird -&gt; Pájaro<br />
+Girlfriend -&gt; Novia<br />
+Fine -&gt; Bien<br />
+Fear -&gt; Miedo<br />
+Ocean -&gt; Océano<br />
+Much -&gt; Mucho<br />
+Half -&gt; Mitad<br />
+Happiness -&gt; Felicidad<br />
+Fan -&gt; Ventilador<br />
+Body -&gt; Cuerpo<br />
+Download -&gt; Descargar<br />
+Tooth -&gt; Diente<br />
+Truth -&gt; Verdad<br />
+Kill -&gt; Matar<br />
+Dear -&gt; Querido<br />
+Knife -&gt; Cuchillo<br />
+Perfect -&gt; Perfecto<br />
+Simple -&gt; Sencillo<br />
+Pass -&gt; Pasar<br />
+Respect -&gt; Respetar<br />
+Germany -&gt; Alemania<br />
+Touch -&gt; Tocar<br />
+Kick -&gt; Patear<br />
+Argentina -&gt; Argentina<br />
+Nothing -&gt; Nada<br />
+Wish -&gt; Deseo<br />
+Wood -&gt; Madera<br />
+Link -&gt; Enlace<br />
+Tear -&gt; Lágrima<br />
+Telephone -&gt; Teléfono<br />
+Male -&gt; Macho<br />
+Put On -&gt; Ponerse<br />
+Artist -&gt; Artista<br />
+Worst -&gt; Peor<br />
+Biology -&gt; Biología<br />
+Protect -&gt; Proteger<br />
+Scarf -&gt; Bufanda<br />
+Hunting -&gt; Caza<br />
+For Example -&gt; Por Ejemplo<br />
+Force -&gt; Fuerza<br />
+Modern -&gt; Moderno<br />
+Prevent -&gt; Prevenir<br />
+University -&gt; Universidad<br />
+Action -&gt; Acción<br />
+Divorce -&gt; Divorcio<br />
+Player -&gt; Jugador<br />
+Dancer -&gt; Bailarín<br />
+Confused -&gt; Confundido<br />
+Physical -&gt; Físico<br />
+Painter -&gt; Pintor<br />
+Represent -&gt; Representar<br />
+Creative -&gt; Creativo<br />
+Powerful -&gt; Poderoso<br />
+Vote -&gt; Votar<br />
+Sadness -&gt; Tristeza<br />
+Hobby -&gt; Pasatiempo<br />
+Medium -&gt; Mediano<br />
+Term -&gt; Término<br />
+Sociable -&gt; Sociable<br />
+Important -&gt; Importante<br />
+Hockey -&gt; Hockey<br />
+Collect -&gt; Coleccionar<br />
+Green Bean -&gt; Frijol Verde<br />
+Check -&gt; Cheque<br />
+Team -&gt; Equipo<br />
+Share -&gt; Compartir<br />
+Ready -&gt; Listo<br />
+Add -&gt; Añadir<br />
+Go To -&gt; Ir A<br />
+Far -&gt; Lejos<br />
+Control -&gt; Control<br />
+Truck -&gt; Camión<br />
+Halloween -&gt; Halloween<br />
+Sales -&gt; Ventas<br />
+Happen -&gt; Suceder<br />
+West -&gt; Oeste<br />
+East -&gt; Este<br />
+Peace -&gt; Paz<br />
+Plate -&gt; Plato<br />
+British -&gt; Británico<br />
+Height -&gt; Estatura<br />
+Female -&gt; Hembra<br />
+Space -&gt; Espacio<br />
+Lock -&gt; Cerradura<br />
+Cross -&gt; Cruzar<br />
+Fresh -&gt; Fresco<br />
+Geography -&gt; Geografía<br />
+Energy -&gt; Energía<br />
+Volcano -&gt; Volcán<br />
+Opportunity -&gt; Oportunidad<br />
+Consider -&gt; Considerar<br />
+Elevator -&gt; Ascensor<br />
+Uniform -&gt; Uniforme<br />
+Process -&gt; Proceso<br />
+Curious -&gt; Curioso<br />
+Comedy -&gt; Comedia<br />
+Storage -&gt; Almacenamiento<br />
+Pair -&gt; Par<br />
+Lifestyle -&gt; Estilo De Vida<br />
+Plastic -&gt; Plástico<br />
+Mustache -&gt; Bigote<br />
+Bus Stop -&gt; Parada De Autobús<br />
+Russian -&gt; Ruso<br />
+Talent -&gt; Talento<br />
+Industry -&gt; Industria<br />
+Decline -&gt; Declinar<br />
+Disagree -&gt; No Estar De Acuerdo<br />
+Rebel -&gt; Rebelde<br />
+License -&gt; Licencia<br />
+Protein -&gt; Proteína<br />
+Discount -&gt; Descuento<br />
+Celebrity -&gt; Celebridad<br />
+Jazz -&gt; Jazz<br />
+Suggestion -&gt; Sugerencia<br />
+Fast Food -&gt; Comida Rápida<br />
+Admit -&gt; Admitir<br />
+Democracy -&gt; Democracia<br />
+Carpenter -&gt; Carpintero<br />
+Clean Up -&gt; Limpiar<br />
+Nutrition -&gt; Nutrición<br />
+Lip -&gt; Labio<br />
+Investigate -&gt; Investigar<br />
+Irritable -&gt; Irritable<br />
+Get Lost -&gt; Perderse<br />
+Import -&gt; Importación<br />
+Impression -&gt; Impresión<br />
+Cardigan -&gt; Cárdigan<br />
+Go To Work -&gt; Ir Al Trabajo<br />
+Fortune -&gt; Fortuna<br />
+Terrified -&gt; Aterrorizado<br />
+Totally -&gt; Totalmente<br />
+Domestic -&gt; Doméstico<br />
+Play The Guitar -&gt; Tocar La Guitarra<br />
+Autobiography -&gt; Autobiografía<br />
+Clean The House -&gt; Limpiar La Casa<br />
+Earache -&gt; Dolor De Oídos<br />
+Utility -&gt; Utilidad<br />
+Smartphone -&gt; Teléfono Inteligente<br />
+Reggae -&gt; Reggae<br />
+Take A Photo -&gt; Tomar Una Foto<br />
+Draw -&gt; Dibujar<br />
+Things -&gt; Cosas<br />
+Every -&gt; Cada<br />
+Choice -&gt; Opción<br />
+Snake -&gt; Serpiente<br />
+Clear -&gt; Claro<br />
+Sausage -&gt; Salchicha<br />
+Celebrate -&gt; Celebrar<br />
+Part -&gt; Parte<br />
+Cap -&gt; Gorra<br />
+Probably -&gt; Probablemente<br />
+Europe -&gt; Europa<br />
+Community -&gt; Comunidad<br />
+Bath -&gt; Bañera<br />
+Base -&gt; Base<br />
+Require -&gt; Requerir<br />
+Drawing -&gt; Dibujo<br />
+Recommend -&gt; Recomendar<br />
+Conversation -&gt; Conversación<br />
+Scientist -&gt; Científico<br />
+Push -&gt; Empujar<br />
+Block -&gt; Bloque<br />
+Adventure -&gt; Aventura<br />
+Danger -&gt; Peligro<br />
+Stressed -&gt; Estresado<br />
+Curly -&gt; Rizado<br />
+Sense -&gt; Sentido<br />
+Picnic -&gt; Pícnic<br />
+Model -&gt; Modelo<br />
+Compare -&gt; Comparar<br />
+Spinach -&gt; Espinaca<br />
+Explore -&gt; Explorar<br />
+Result -&gt; Resultado<br />
+Speed -&gt; Velocidad<br />
+Celebration -&gt; Celebración<br />
+Canada -&gt; Canadá<br />
+Rose -&gt; Rosa<br />
+Economy -&gt; Economía<br />
+Memory -&gt; Memoria<br />
+Flexible -&gt; Flexible<br />
+Robot -&gt; Robot<br />
+Tradition -&gt; Tradición<br />
+Forgive -&gt; Perdonar<br />
+Battle -&gt; Batalla<br />
+Software -&gt; Software<br />
+Zebra -&gt; Cebra<br />
+Independence -&gt; Independencia<br />
+Easily -&gt; Fácilmente<br />
+Religious -&gt; Religioso<br />
+Crisis -&gt; Crisis<br />
+Tango -&gt; Tango<br />
+Frozen -&gt; Congelado<br />
+Horror -&gt; Horror<br />
+Detail -&gt; Detalle<br />
+Poison -&gt; Veneno<br />
+Equality -&gt; Igualdad<br />
+Contribute -&gt; Contribuir<br />
+Sister-In-Law -&gt; Cuñada<br />
+Literature -&gt; Literatura<br />
+North -&gt; Norte<br />
+Parking -&gt; Estacionamiento<br />
+Kindergarten -&gt; Kindergarten<br />
+Package -&gt; Paquete<br />
+Scale -&gt; Escala<br />
+Vegetarian -&gt; Vegetariano<br />
+Respond -&gt; Responder<br />
+National -&gt; Nacional<br />
+Employer -&gt; Empleador<br />
+Get Out -&gt; Salir<br />
+Downstairs -&gt; Abajo<br />
+Romantic -&gt; Romántico<br />
+Disaster -&gt; Desastre<br />
+Reference -&gt; Referencia<br />
+Suspicious -&gt; Sospechoso<br />
+Unemployment -&gt; Desempleo<br />
+Bandage -&gt; Vendaje<br />
+Shoe Store -&gt; Zapatería<br />
+Ridiculous -&gt; Ridículo<br />
+Factor -&gt; Factor<br />
+Good Evening -&gt; Buenas Noches</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="6" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Avanzado</h2>
+<p>Skateboarding -&gt; Hacer Skateboard<br />
+Take Advantage Of -&gt; Aprovechar<br />
+Blood Pressure -&gt; Presión Arterial<br />
+Freezing -&gt; Helado<br />
+Air Conditioner -&gt; Acondicionador De Aire<br />
+Brake -&gt; Freno<br />
+Cart -&gt; Carro<br />
+Catch Up -&gt; Ponerse Al Día<br />
+Preschool -&gt; Jardín De Infancia<br />
+Reasonable -&gt; Razonable<br />
+Maintenance -&gt; Mantenimiento<br />
+Lounge -&gt; Salón<br />
+Fairly -&gt; Bastante<br />
+Platform -&gt; Plataforma<br />
+Adjust -&gt; Ajustar<br />
+Advertise -&gt; Anunciar<br />
+Membership -&gt; Afiliación<br />
+Coworker -&gt; Colega<br />
+Experiment -&gt; Experimento<br />
+Scan -&gt; Escanear<br />
+Tourism -&gt; Turismo<br />
+Entertain -&gt; Entretener<br />
+Apple Pie -&gt; Pastel De Manzana<br />
+Tablet -&gt; Tableta<br />
+Karate -&gt; Karate<br />
+Document -&gt; Documento<br />
+Fabulous -&gt; Fabuloso<br />
+Country Music -&gt; Música Country<br />
+Negative -&gt; Negativo<br />
+Good Night -&gt; Buenas Noches<br />
+Flash -&gt; Destello<br />
+Continent -&gt; Continente<br />
+Demanding -&gt; Exigente<br />
+Jaw -&gt; Mandíbula<br />
+Conference -&gt; Conferencia<br />
+Suspect -&gt; Sospechoso<br />
+Want To -&gt; Querer<br />
+Economic -&gt; Económico<br />
+Dot -&gt; Punto<br />
+Deposit -&gt; Depósito<br />
+Go Back -&gt; Volver<br />
+Habitual -&gt; Habitual<br />
+Regularly -&gt; Regularmente<br />
+Knit -&gt; Tejer<br />
+Drop Off -&gt; Dejar<br />
+Reputation -&gt; Reputación<br />
+Traffic Light -&gt; Semáforo<br />
+Confront -&gt; Afrontar<br />
+Amazed -&gt; Asombrado<br />
+Tour Guide -&gt; Guía Turístico<br />
+Blizzard -&gt; Tormenta De Nieve<br />
+Collapse -&gt; Derrumbarse<br />
+Venue -&gt; Lugar<br />
+Science Fiction -&gt; Ciencia Ficción<br />
+Diaper -&gt; Pañal<br />
+Dye -&gt; Teñir<br />
+Boarding Pass -&gt; Tarjeta De Embarque<br />
+Easygoing -&gt; De Trato Fácil<br />
+Beverage -&gt; Bebida<br />
+All Right -&gt; Bien<br />
+Operation -&gt; Operación<br />
+Coffee Shop -&gt; Cafetería<br />
+Ache -&gt; Dolor<br />
+Clinic -&gt; Clínica<br />
+Apology -&gt; Disculpa<br />
+Infection -&gt; Infección<br />
+Resign -&gt; Renunciar<br />
+Play Basketball -&gt; Jugar Baloncesto<br />
+Insist -&gt; Insistir En<br />
+Extended Family -&gt; Familia Extendida<br />
+Second Floor -&gt; Segundo Piso<br />
+Take Pictures -&gt; Tomar Fotos<br />
+At Work -&gt; En El Trabajo<br />
+Frustrating -&gt; Frustrante<br />
+Alter -&gt; Alterar<br />
+Soap Opera -&gt; Telenovela<br />
+Famine -&gt; Hambruna<br />
+Transform -&gt; Transformarse<br />
+Overtime -&gt; Horas Extras<br />
+Compose -&gt; Componer<br />
+Appliance -&gt; Electrodoméstico<br />
+Barbershop -&gt; Barbería<br />
+Insecure -&gt; Inseguro<br />
+Rebellious -&gt; Rebelde<br />
+Next Month -&gt; El Mes Que Viene<br />
+Mountain Range -&gt; Cordillera<br />
+Croissant -&gt; Croissant<br />
+Take Up -&gt; Levantar<br />
+Motivate -&gt; Motivar<br />
+Handbag -&gt; Cartera<br />
+Distant -&gt; Lejano<br />
+Talk About -&gt; Hablar De<br />
+Monthly -&gt; Mensual<br />
+Put Down -&gt; Dejar<br />
+Blackmail -&gt; Chantajear<br />
+Spacious -&gt; Espacioso<br />
+Gadget -&gt; Aparato<br />
+Trendy -&gt; Moderno<br />
+Traffic Jam -&gt; Atasco<br />
+Antibiotic -&gt; Antibiótico<br />
+Savings -&gt; Ahorros<br />
+Disgusted -&gt; Asqueado<br />
+Planner -&gt; Planificador<br />
+Think About -&gt; Pensar En<br />
+Personnel -&gt; Personal<br />
+Food Poisoning -&gt; Intoxicación Alimentaria<br />
+Gradually -&gt; Poco A Poco<br />
+Ambition -&gt; Ambición<br />
+Thai -&gt; Tailandés<br />
+Prediction -&gt; Predicción<br />
+Beautifully -&gt; Maravillosamente<br />
+Turnover -&gt; Facturación<br />
+Australian -&gt; Australiano<br />
+Natural Disaster -&gt; Desastre Natural<br />
+Etiquette -&gt; Protocolo<br />
+Settle Down -&gt; Acomodarse<br />
+Vaccination -&gt; Vacunación<br />
+Examination -&gt; Inspección<br />
+Satellite -&gt; Satélite<br />
+Call Back -&gt; Volver A Llamar<br />
+Bathrobe -&gt; Bata De Baño<br />
+Get To Know -&gt; Conocer<br />
+Stay At Home -&gt; Quedarse En Casa<br />
+Worrying -&gt; Preocupante<br />
+Fascinated -&gt; Fascinado<br />
+Go To College -&gt; Ir A La Universidad<br />
+Do The Dishes -&gt; Lavar Los Platos<br />
+Astonished -&gt; Asombrado<br />
+Take Back -&gt; Llevar<br />
+Voice Mail -&gt; Mensaje De Voz<br />
+Take On -&gt; Encargarse<br />
+Dilemma -&gt; Dilema<br />
+Run Out Of -&gt; Quedarse Sin<br />
+Heavily -&gt; Fuertemente<br />
+Stay In Bed -&gt; Quedarse En La Cama<br />
+Game Show -&gt; Concurso<br />
+Checkup -&gt; Chequeo<br />
+Umpire -&gt; Árbitro<br />
+Art Gallery -&gt; Galería De Arte<br />
+Talk Show -&gt; Talk Show<br />
+Conscientious -&gt; Concienzudo<br />
+Go Hiking -&gt; Ir De Excursión<br />
+Parking Space -&gt; Lugar Para Estacionar<br />
+Get Along With -&gt; Llevarse Bien Con<br />
+Digital Camera -&gt; Cámara Digital<br />
+Get Through -&gt; Aguantar<br />
+Snowstorm -&gt; Tormenta De Nieve<br />
+Get Out Of -&gt; Librarse De<br />
+Thank Goodness -&gt; Menos Mal<br />
+Get On With -&gt; Seguir Con<br />
+Unhelpful -&gt; Poco Servicial<br />
+Go With -&gt; Combinar Con<br />
+Aisle Seat -&gt; Asiento De Pasillo<br />
+Go Running -&gt; Salir A Correr<br />
+Sensational -&gt; Espectacular<br />
+Musical Instrument -&gt; Instrumento Musical<br />
+Sales Assistant -&gt; Asistente De Ventas<br />
+Live On -&gt; Perdurar<br />
+Finish Work -&gt; Terminar El Trabajo<br />
+Windshield Wiper -&gt; Limpiaparabrisas<br />
+Buy A House -&gt; Comprar Una Casa<br />
+Potato Chip -&gt; Papa Frita<br />
+Nurse's Office -&gt; Enfermería<br />
+Do The Housework -&gt; Hacer Las Tareas Domésticas<br />
+Up-To-Date -&gt; Moderno<br />
+Baby -&gt; Bebé<br />
+Even Though -&gt; A Pesar De Que<br />
+Girl -&gt; Niña<br />
+Laugh -&gt; Reírse<br />
+Enough -&gt; Bastante<br />
+Real -&gt; Real<br />
+Meaning -&gt; Significado<br />
+Inside -&gt; Dentro<br />
+Church -&gt; Iglesia<br />
+Lead -&gt; Llevar<br />
+Almost -&gt; Casi<br />
+Boy -&gt; Niño<br />
+Attend -&gt; Asistir A<br />
+Hold -&gt; Agarrar<br />
+Either -&gt; O<br />
+Turn -&gt; Girar<br />
+Proud -&gt; Orgulloso<br />
+Pain -&gt; Dolor<br />
+Dad -&gt; Papá<br />
+Paper -&gt; Papel<br />
+Spoon -&gt; Cuchara<br />
+Despite -&gt; A Pesar De<br />
+Character -&gt; Personaje<br />
+Allow -&gt; Permitir<br />
+Below -&gt; Debajo De<br />
+Race -&gt; Carrera<br />
+Land -&gt; Tierra<br />
+Bar -&gt; Barra<br />
+Capital -&gt; Capital<br />
+Calm -&gt; Calma<br />
+Farm -&gt; Granja<br />
+Fork -&gt; Tenedor<br />
+Blanket -&gt; Manta<br />
+Average -&gt; Promedio<br />
+Success -&gt; Éxito<br />
+Boyfriend -&gt; Novio<br />
+Gorgeous -&gt; Precioso<br />
+Suddenly -&gt; De Repente<br />
+Dead -&gt; Muerto<br />
+Ice -&gt; Hielo<br />
+Grade -&gt; Nota<br />
+Sit Down -&gt; Sentarse<br />
+Stairs -&gt; Escaleras<br />
+Skinny -&gt; Flaco<br />
+Mood -&gt; Humor<br />
+Anyone -&gt; Cualquiera<br />
+Perform -&gt; Realizar<br />
+Take Care -&gt; Ten Cuidado<br />
+Google -&gt; Consultar En Google<br />
+Honey -&gt; Miel<br />
+Purpose -&gt; Propósito<br />
+Makeup -&gt; Maquillaje<br />
+Recently -&gt; Recientemente<br />
+Hey -&gt; Oye<br />
+Airplane -&gt; Avión<br />
+Childhood -&gt; Infancia<br />
+Sun -&gt; Sol<br />
+Direct -&gt; Dirigir<br />
+According To -&gt; Según<br />
+Stubborn -&gt; Terco<br />
+Form -&gt; Forma<br />
+Watermelon -&gt; Sandía<br />
+Host -&gt; Anfitrión<br />
+Worry -&gt; Preocuparse<br />
+Strange -&gt; Extraño<br />
+Few -&gt; Pocos<br />
+Brain -&gt; Cerebro<br />
+Lonely -&gt; Solo<br />
+Treat -&gt; Tratar<br />
+Opinion -&gt; Opinión<br />
+Vacuum -&gt; Aspiradora<br />
+No One -&gt; Nadie<br />
+Ground -&gt; Suelo<br />
+Plot -&gt; Argumento<br />
+Jewelry -&gt; Joyería<br />
+Hole -&gt; Agujero<br />
+Mix -&gt; Mezcla<br />
+Beauty -&gt; Belleza<br />
+Police -&gt; Policía<br />
+Papaya -&gt; Papaya<br />
+Duck -&gt; Pato<br />
+Eating -&gt; Comer<br />
+Poster -&gt; Póster<br />
+Find Out -&gt; Averiguar<br />
+Thick -&gt; Grueso<br />
+Escape -&gt; Escaparse De<br />
+Camping -&gt; Acampada<br />
+Hurry -&gt; Prisa<br />
+Update -&gt; Actualización<br />
+Doing -&gt; Realización<br />
+Towards -&gt; Hacia<br />
+Popcorn -&gt; Palomitas<br />
+Currently -&gt; Actualmente<br />
+Middle -&gt; Medio<br />
+Rise -&gt; Aumento<br />
+Deep -&gt; Profundo<br />
+Roof -&gt; Techo<br />
+Develop -&gt; Desarrollar<br />
+Military -&gt; Fuerzas Armadas<br />
+Forward -&gt; Hacia Adelante<br />
+Value -&gt; Valor<br />
+Stick -&gt; Palo<br />
+Whose -&gt; De Quién<br />
+Extra -&gt; Extra<br />
+Competition -&gt; Competencia<br />
+Parade -&gt; Desfile<br />
+Marriage -&gt; Matrimonio<br />
+Messy -&gt; Desordenado<br />
+Legal -&gt; Legal<br />
+Anger -&gt; Ira<br />
+Piece -&gt; Pedazo<br />
+Joke -&gt; Broma<br />
+Closed -&gt; Cerrado<br />
+Gas -&gt; Gas<br />
+Working -&gt; Aboral<br />
+Clever -&gt; Listo<br />
+Accurate -&gt; Preciso<br />
+Hot Dog -&gt; Perro Caliente<br />
+Couple -&gt; Pareja<br />
+Loyal -&gt; Leal<br />
+Path -&gt; Camino<br />
+Mess -&gt; Desorden<br />
+Avocado -&gt; Aguacate<br />
+Apply -&gt; Aplicar<br />
+Matter -&gt; Importar<br />
+Belong -&gt; Ser De<br />
+Joy -&gt; Alegría<br />
+Daily -&gt; Cotidiano<br />
+Speaker -&gt; Altavoz<br />
+Recipe -&gt; Receta<br />
+Toy -&gt; Juguete<br />
+Storm -&gt; Tormenta<br />
+Concern -&gt; Preocupar<br />
+Introduce -&gt; Presentar<br />
+Rule -&gt; Regla<br />
+Shake -&gt; Agitar<br />
+Peanut Butter -&gt; Mantequilla De Maní<br />
+President -&gt; Presidente<br />
+Energetic -&gt; Enérgico<br />
+Lemonade -&gt; Limonada<br />
+Status -&gt; Posición Social<br />
+Award -&gt; Premio<br />
+Downtown -&gt; Centro<br />
+Salsa -&gt; Salsa<br />
+Management -&gt; Gerencia<br />
+Target -&gt; Objetivo<br />
+Make Up -&gt; Inventar<br />
+Pressure -&gt; Presión<br />
+Stepmother -&gt; Madrastra<br />
+Blow -&gt; Soplar<br />
+Social -&gt; Social<br />
+Cancer -&gt; Cáncer<br />
+Cherry -&gt; Cereza<br />
+Bone -&gt; Hueso<br />
+Fridge -&gt; Nevera<br />
+Vocabulary -&gt; Vocabulario<br />
+Stuck -&gt; Atascado<br />
+Physical Education -&gt; Educación Física<br />
+Mail -&gt; Correo<br />
+Tough -&gt; Duro<br />
+Tire -&gt; Llanta<br />
+Roll -&gt; Rodar<br />
+Assignment -&gt; Tarea<br />
+Psychology -&gt; Psicología<br />
+Local -&gt; Local<br />
+Sweatshirt -&gt; Sudadera<br />
+Lobster -&gt; Langosta<br />
+Replace -&gt; Reemplazar<br />
+Crush -&gt; Aplastar<br />
+Charity -&gt; Caridad<br />
+Lyrics -&gt; Letra<br />
+Contact -&gt; Contacto<br />
+Feelings -&gt; Sentimientos<br />
+Waterfall -&gt; Cascada<br />
+Border -&gt; Frontera<br />
+Behave -&gt; Comportarse<br />
+Bathing Suit -&gt; Traje De Baño<br />
+Cheat -&gt; Engañar<br />
+Stepfather -&gt; Padrastro<br />
+Quick -&gt; Rápido<br />
+Kindness -&gt; Amabilidad<br />
+Label -&gt; Etiqueta<br />
+Bull -&gt; Toro<br />
+Course -&gt; Curso<br />
+Jungle -&gt; Selva<br />
+Boil -&gt; Hervir<br />
+Soldier -&gt; Soldado<br />
+Patience -&gt; Paciencia<br />
+Physics -&gt; Física<br />
+Original -&gt; Original<br />
+Customs -&gt; Aduana<br />
+Guilty -&gt; Culpable<br />
+Roommate -&gt; Compañero De Cuarto<br />
+Thunder -&gt; Truenos<br />
+Chase -&gt; Perseguir<br />
+Sheet -&gt; Sábana<br />
+Device -&gt; Aparato<br />
+Advantage -&gt; Ventaja<br />
+Commitment -&gt; Compromiso<br />
+Spoiled -&gt; Podrido<br />
+Sidewalk -&gt; Acera<br />
+Heritage -&gt; Patrimonio<br />
+Organization -&gt; Organización<br />
+Luck -&gt; Suerte<br />
+Member -&gt; Miembro<br />
+Determined -&gt; Decidido<br />
+Athlete -&gt; Atleta<br />
+Compliment -&gt; Felicitar<br />
+Grocery Store -&gt; Supermercado<br />
+Trick -&gt; Truco<br />
+Standard -&gt; Estándar<br />
+Calf -&gt; Pantorrilla<br />
+System -&gt; Sistema<br />
+Surfing -&gt; Surf<br />
+Cheek -&gt; Mejilla<br />
+Feedback -&gt; Retroalimentación<br />
+Delivery -&gt; Entrega<br />
+Defeat -&gt; Derrota<br />
+Center -&gt; Centro<br />
+Pleasure -&gt; Placer<br />
+Highway -&gt; Carretera<br />
+Violin -&gt; Violín<br />
+Yell -&gt; Gritar<br />
+Known -&gt; Conocido<br />
+Private -&gt; Privado<br />
+Pay Attention -&gt; Prestar Atención<br />
+Interpreter -&gt; Intérprete<br />
+Sore -&gt; Dolorido<br />
+Agenda -&gt; Orden Del Día<br />
+Mop -&gt; Fregar<br />
+Groceries -&gt; Comestibles<br />
+Lower -&gt; Bajar<br />
+Achievement -&gt; Logro<br />
+Advise -&gt; Aconsejar<br />
+Ketchup -&gt; Salsa De Tomate<br />
+Statue -&gt; Estatua<br />
+Public -&gt; Público<br />
+Whereas -&gt; Mientras Que<br />
+Scream -&gt; Gritar<br />
+Shampoo -&gt; Champú<br />
+Colombia -&gt; Colombia<br />
+Likely -&gt; Probable<br />
+Mask -&gt; Máscara<br />
+Forehead -&gt; Frente<br />
+Raincoat -&gt; Impermeable<br />
+Drums -&gt; Batería<br />
+Tax -&gt; Impuesto<br />
+Melon -&gt; Melón<br />
+Signature -&gt; Firma<br />
+Swallow -&gt; Tragar<br />
+Breathe -&gt; Respirar<br />
+Construction -&gt; Construcción<br />
+Traveling -&gt; Viajar<br />
+Neat -&gt; Ordenado<br />
+Slice -&gt; Rebanada<br />
+Ride A Bike -&gt; Montar En Bici<br />
+Leak -&gt; Agujero<br />
+Row -&gt; Fila<br />
+Villa -&gt; Casa De Campo<br />
+Souvenir -&gt; Recuerdo<br />
+Indian -&gt; Indio<br />
+Harvest -&gt; Cosecha<br />
+Thoughtful -&gt; Pensativo<br />
+Standing -&gt; De Pie<br />
+Property -&gt; Propiedad<br />
+Upstairs -&gt; Arriba<br />
+Communicate -&gt; Comunicarse<br />
+Plum -&gt; Ciruela<br />
+Blond -&gt; Rubio<br />
+Entire -&gt; Entero<br />
+Arrival -&gt; Llegada<br />
+Immigration -&gt; Inmigración<br />
+Clumsy -&gt; Torpe<br />
+Commit -&gt; Cometer<br />
+Typical -&gt; Típico<br />
+Supportive -&gt; De Apoyo<br />
+Convince -&gt; Convencer<br />
+Frustrated -&gt; Frustrado<br />
+Secretary -&gt; Secretario<br />
+Hesitate -&gt; Vacilar<br />
+Sushi -&gt; Sushi<br />
+Custom -&gt; Costumbre<br />
+Donate -&gt; Donar<br />
+Heel -&gt; Talón<br />
+Tiring -&gt; Agotador<br />
+Creep -&gt; Deslizarse<br />
+Flashlight -&gt; Linterna<br />
+Choir -&gt; Coro<br />
+Owe -&gt; Deber<br />
+As Soon As -&gt; Tan Pronto Como<br />
+Seek -&gt; Buscar<br />
+Seriously -&gt; Seriamente<br />
+Shock -&gt; Choque<br />
+Site -&gt; Lugar<br />
+Compromise -&gt; Solución Intermedia<br />
+Doughnut -&gt; Rosquilla<br />
+Bride -&gt; Novia<br />
+Inspire -&gt; Inspirar<br />
+Appeal -&gt; Llamamiento<br />
+Hearing -&gt; Oído<br />
+Argentinian -&gt; Argentino<br />
+Electricity -&gt; Electricidad<br />
+Mystery -&gt; Misterio<br />
+Anybody -&gt; Cualquiera<br />
+Captain -&gt; Capitán<br />
+Sculpture -&gt; Escultura<br />
+Whisper -&gt; Susurrar<br />
+Cricket -&gt; Críquet<br />
+Alphabet -&gt; Alfabeto<br />
+Slip -&gt; Resbalar<br />
+Shocked -&gt; Estupefacto<br />
+Outstanding -&gt; Extraordinario<br />
+Demonstrate -&gt; Demostrar<br />
+Tap -&gt; Dar Un Golpecito A<br />
+Jelly -&gt; Jalea<br />
+Sailing -&gt; Navegación A Vela<br />
+Pill -&gt; Pastilla<br />
+Nightmare -&gt; Pesadilla<br />
+Flying -&gt; Vuelo<br />
+Ahead -&gt; Adelante<br />
+Rescue -&gt; Rescate<br />
+Litter -&gt; Basura<br />
+Habit -&gt; Costumbre<br />
+Encounter -&gt; Encuentro<br />
+Junk Food -&gt; Comida Basura<br />
+Freeze -&gt; Congelar<br />
+Measles -&gt; Sarampión<br />
+Profile -&gt; Perfil<br />
+Divorced -&gt; Divorciado<br />
+Avenue -&gt; Avenida<br />
+Object -&gt; Objeto<br />
+Muscular -&gt; Muscular<br />
+Surgeon -&gt; Cirujano<br />
+Fortunately -&gt; Afortunadamente<br />
+Cancel -&gt; Cancelar<br />
+Surname -&gt; Apellido<br />
+Cycling -&gt; Ciclismo<br />
+Save Money -&gt; Ahorrar Dinero<br />
+Procedure -&gt; Procedimiento<br />
+Focused -&gt; Concentrado<br />
+Embarrassing -&gt; Embarazoso<br />
+Lecture -&gt; Clase<br />
+Plural -&gt; Plural<br />
+Cope -&gt; Aguantar<br />
+Wash The Dishes -&gt; Lavar Los Platos<br />
+Empire -&gt; Imperio<br />
+Knock -&gt; Golpe<br />
+Sunbathe -&gt; Tomar El Sol<br />
+Western -&gt; Oeste<br />
+Attachment -&gt; Adjunto<br />
+Swear -&gt; Jurar<br />
+Photography -&gt; Fotografía<br />
+Reject -&gt; Rechazar<br />
+Permission -&gt; Permiso<br />
+Routine -&gt; Rutina<br />
+Estimate -&gt; Estimar<br />
+Admire -&gt; Admirar<br />
+Muscle -&gt; Músculo<br />
+Figure Out -&gt; Resolver<br />
+Annoy -&gt; Molestar<br />
+Snowy -&gt; Nevado<br />
+Paradise -&gt; Paraíso<br />
+Temporary -&gt; Temporal<br />
+Portrait -&gt; Retrato<br />
+Cabin -&gt; Cabaña<br />
+North America -&gt; Norteamérica<br />
+Drug -&gt; Droga<br />
+Privacy -&gt; Privacidad<br />
+Liberal -&gt; Liberal<br />
+Flute -&gt; Flauta<br />
+Loudly -&gt; Alto<br />
+Housing -&gt; Alojamiento<br />
+Supervisor -&gt; Supervisor<br />
+Finance -&gt; Finanzas<br />
+Hairdryer -&gt; Secador De Pelo<br />
+Outcome -&gt; Resultado<br />
+Urban -&gt; Urbano<br />
+Stereotype -&gt; Estereotipo<br />
+Lose Weight -&gt; Adelgazar<br />
+Float -&gt; Flotar<br />
+Invoice -&gt; Factura<br />
+Imagination -&gt; Imaginación<br />
+Scenery -&gt; Paisaje<br />
+Buddy -&gt; Amigo<br />
+Fall Asleep -&gt; Dormirse<br />
+Similarity -&gt; Similitud<br />
+Identity -&gt; Identidad<br />
+Assist -&gt; Ayudar<br />
+Appreciation -&gt; Gratitud<br />
+Commercial -&gt; Comercial<br />
+Cultural -&gt; Cultural<br />
+Comment -&gt; Comentario<br />
+Diner -&gt; Cafetería<br />
+Stepbrother -&gt; Hermanastro<br />
+Curtain -&gt; Cortina<br />
+Pleased -&gt; Satisfecho<br />
+Guilt -&gt; Culpa<br />
+Route -&gt; Ruta<br />
+Shrink -&gt; Encogerse<br />
+Brilliant -&gt; Brillante<br />
+Take Over -&gt; Tomar El Poder<br />
+Quietly -&gt; Silenciosamente<br />
+Choke -&gt; Ahogar<br />
+Recycling -&gt; Reciclaje<br />
+Texting -&gt; Envío De Mensajes De Texto<br />
+Clam -&gt; Almeja<br />
+Critical -&gt; Crítico<br />
+Discrimination -&gt; Discriminación<br />
+Terror -&gt; Terror<br />
+Pyramid -&gt; Pirámide<br />
+Ask For -&gt; Pedir<br />
+Cattle -&gt; Ganado<br />
+Plug -&gt; Tapón<br />
+False -&gt; Falso<br />
+Dismiss -&gt; Despedir<br />
+Sibling -&gt; Hermano<br />
+Generation -&gt; Generación<br />
+Outlet -&gt; Tienda<br />
+Biography -&gt; Biografía<br />
+Stingy -&gt; Tacaño<br />
+Peel -&gt; Pelar<br />
+Ambulance -&gt; Ambulancia<br />
+Concentrate -&gt; Concentrar<br />
+Librarian -&gt; Bibliotecario<br />
+Delighted -&gt; Encantado<br />
+Liquid -&gt; Líquido<br />
+Representative -&gt; Representante<br />
+Selling -&gt; Venta<br />
+Deodorant -&gt; Desodorante<br />
+Slope -&gt; Cuesta<br />
+Silence -&gt; Silencio<br />
+Facility -&gt; Instalación<br />
+Hardly -&gt; Apenas<br />
+Lobby -&gt; Vestíbulo<br />
+Revenue -&gt; Ingresos<br />
+Sue -&gt; Demandar<br />
+Arrangement -&gt; Arreglo<br />
+Suite -&gt; Suite<br />
+Slightly -&gt; Ligeramente<br />
+Clothing Store -&gt; Tienda De Ropa<br />
+Corruption -&gt; Corrupción<br />
+Retirement -&gt; Jubilación<br />
+Conduct -&gt; Conducta<br />
+Robbery -&gt; Robo<br />
+Spectacular -&gt; Espectacular<br />
+Plaid -&gt; Tela Escocesa<br />
+Sign Up -&gt; Inscribirse<br />
+Hopeless -&gt; Desesperado<br />
+Bid -&gt; Ofrecer<br />
+Junk -&gt; Chatarra<br />
+Climate Change -&gt; Cambio Climático<br />
+Production -&gt; Producción<br />
+Keen -&gt; Entusiasta<br />
+Laboratory -&gt; Laboratorio<br />
+Inexpensive -&gt; Barato<br />
+Stylish -&gt; Elegante<br />
+Fluently -&gt; Con Fluidez<br />
+Injection -&gt; Inyección<br />
+Bathe -&gt; Bañarse<br />
+Urge -&gt; Instar<br />
+Theory -&gt; Teoría<br />
+Singular -&gt; Singular<br />
+Guarantee -&gt; Garantizar<br />
+Tights -&gt; Malla<br />
+Family Member -&gt; Miembro De La Familia<br />
+Bland -&gt; Soso<br />
+Cash Register -&gt; Caja<br />
+Stain -&gt; Mancha<br />
+Associate -&gt; Asociado<br />
+Murderer -&gt; Asesino<br />
+Consume -&gt; Consumir<br />
+Moment -&gt; Momento<br />
+Sigh -&gt; Suspiro<br />
+Decade -&gt; Década<br />
+Usual -&gt; Habitual<br />
+Day Of The Week -&gt; Día De La Semana<br />
+Honeymoon -&gt; Luna De Miel<br />
+Creativity -&gt; Creatividad<br />
+Impress -&gt; Impresionar<br />
+Cello -&gt; Violonchelo<br />
+Tenant -&gt; Inquilino<br />
+Loaf -&gt; Pan De Molde<br />
+Blush -&gt; Ruborizarse<br />
+Wig -&gt; Peluca<br />
+Furious -&gt; Furioso<br />
+Turn Up -&gt; Subir<br />
+Sunburn -&gt; Quemadura De Sol<br />
+Graduate School -&gt; Escuela De Posgrado<br />
+Saxophone -&gt; Saxofón<br />
+Raisin -&gt; Pasa<br />
+Reaction -&gt; Reacción<br />
+Theft -&gt; Robo<br />
+Client -&gt; Cliente<br />
+Zip Code -&gt; Código Postal<br />
+First Floor -&gt; Primer Piso<br />
+National Park -&gt; Parque Nacional<br />
+Steering Wheel -&gt; Volante<br />
+Jewelry Store -&gt; Joyería<br />
+Ingredient -&gt; Ingrediente<br />
+Unbelievable -&gt; Increíble<br />
+Loneliness -&gt; Soledad<br />
+Disturb -&gt; Perturbar<br />
+Myth -&gt; Mito<br />
+Take After -&gt; Parecerse A<br />
+Install -&gt; Instalar<br />
+Browse -&gt; Ojear<br />
+Aspirin -&gt; Aspirina<br />
+Toothache -&gt; Dolor De Muelas<br />
+Turkish -&gt; Turco<br />
+Coffee Table -&gt; Mesa De Centro<br />
+X-Ray -&gt; Rayo X<br />
+Qualification -&gt; Requisito<br />
+Coincidence -&gt; Coincidencia<br />
+Loud Music -&gt; Música Alta<br />
+Rock Music -&gt; Rock<br />
+Medal -&gt; Medalla<br />
+Extend -&gt; Extender<br />
+React -&gt; Reaccionar A<br />
+Bleeding -&gt; Hemorragia<br />
+Acceptable -&gt; Aceptable<br />
+Visitor -&gt; Visitante<br />
+Timid -&gt; Tímido<br />
+Expenses -&gt; Gastos<br />
+Disturbing -&gt; Inquietante<br />
+Examine -&gt; Examinar<br />
+Insult -&gt; Insultar<br />
+Modest -&gt; Modesto<br />
+Sketch -&gt; Bosquejo<br />
+Middle Name -&gt; Segundo Nombre<br />
+Vast -&gt; Enorme<br />
+Fraud -&gt; Fraude<br />
+Consumer -&gt; Consumidor<br />
+Operate -&gt; Funcionar<br />
+Infrastructure -&gt; Infraestructura<br />
+Thrill -&gt; Emoción<br />
+Organic -&gt; Orgánico<br />
+Possibility -&gt; Posibilidad<br />
+Glacier -&gt; Glaciar<br />
+Dependable -&gt; Fiable<br />
+Fire Station -&gt; Estación De Bomberos<br />
+Technical -&gt; Técnico<br />
+Annual -&gt; Anual<br />
+Nod -&gt; Asentir Con La Cabeza<br />
+Telephone Number -&gt; Número De Teléfono<br />
+Drizzle -&gt; Llovizna<br />
+Cooker -&gt; Olla<br />
+Pupil -&gt; Alumno<br />
+Fill Out -&gt; Rellenar<br />
+Technician -&gt; Técnico<br />
+Baseball Cap -&gt; Gorra De Béisbol<br />
+Buzz -&gt; Zumbido<br />
+Run Out -&gt; Acabarse<br />
+Baggage -&gt; Equipaje<br />
+Dozen -&gt; Docena<br />
+Breathtaking -&gt; Impresionante<br />
+Punctual -&gt; Puntual<br />
+Poisonous -&gt; Venenoso<br />
+Talk On The Phone -&gt; Hablar Por Teléfono<br />
+Mussel -&gt; Mejillón<br />
+Community Service -&gt; Servicio A La Comunidad<br />
+Take For Granted -&gt; Dar Por Hecho<br />
+Indicate -&gt; Señalar<br />
+Windsurfing -&gt; Windsurf<br />
+Demonstration -&gt; Demostración<br />
+Assemble -&gt; Armar<br />
+Paperwork -&gt; Papeleo<br />
+Graffiti -&gt; Graffiti<br />
+Obsession -&gt; Obsesión<br />
+Unreliable -&gt; Poco Fiable<br />
+Ancestor -&gt; Antepasado<br />
+Adverb -&gt; Adverbio<br />
+Expense -&gt; Gasto<br />
+Donation -&gt; Donativo<br />
+Fatty -&gt; Graso<br />
+Shake Hands -&gt; Dar La Mano<br />
+Grate -&gt; Rallar<br />
+Put Up -&gt; Levantar<br />
+Ointment -&gt; Ungüento<br />
+Investigation -&gt; Investigación<br />
+Ask Questions -&gt; Hacer Preguntas<br />
+Consultant -&gt; Consultor<br />
+Underestimate -&gt; Subestimar<br />
+Imaginative -&gt; Imaginativo<br />
+End Up -&gt; Terminar<br />
+Thrilling -&gt; Emocionante<br />
+Shaving Cream -&gt; Crema De Afeitar<br />
+Accuse -&gt; Acusar<br />
+Drip -&gt; Gotear<br />
+Mobile Phone -&gt; Teléfono Móvil<br />
+Payroll -&gt; Nómina<br />
+Negotiate -&gt; Negociar<br />
+Packaging -&gt; Embalaje<br />
+Fashion Designer -&gt; Diseñador De Modas<br />
+Text Message -&gt; Mensaje De Texto<br />
+Pulse -&gt; Pulso<br />
+Freeway -&gt; Autopista<br />
+Shiver -&gt; Temblar<br />
+Throw Up -&gt; Devolver<br />
+Exhausting -&gt; Agotador<br />
+Turn Out -&gt; Resultar<br />
+Flower Shop -&gt; Floristería<br />
+Pant -&gt; Pantalón<br />
+Businesswoman -&gt; Mujer De Negocios<br />
+Fascinate -&gt; Fascinar<br />
+Public Transportation -&gt; Transporte Público<br />
+Tram -&gt; Tranvía<br />
+Recreation -&gt; Recreación<br />
+Censorship -&gt; Censura<br />
+Look Out -&gt; Tener Cuidado<br />
+Inflation -&gt; Inflación<br />
+First-Aid -&gt; De Primeros Auxilios<br />
+Dreadful -&gt; Espantoso<br />
+Care For -&gt; Querer<br />
+Stay Home -&gt; Quedarse En Casa<br />
+Dominate -&gt; Dominar<br />
+Dominant -&gt; Dominante<br />
+Burglary -&gt; Robo<br />
+Cholesterol -&gt; Colesterol<br />
+Handy -&gt; Práctico<br />
+Half Sister -&gt; Hermanastra<br />
+Brainstorm -&gt; Lluvia De Ideas<br />
+Custodian -&gt; Conserje<br />
+Insomnia -&gt; Insomnio<br />
+Rehearse -&gt; Ensayar<br />
+Nightlife -&gt; Vida Nocturna<br />
+Scramble -&gt; Codificar<br />
+Offense -&gt; Delito<br />
+Carbohydrate -&gt; Carbohidrato<br />
+Put Up With -&gt; Aguantar<br />
+Eccentric -&gt; Excéntrico<br />
+Adjustment -&gt; Ajuste<br />
+Handout -&gt; Hoja Informativa<br />
+Exchange Rate -&gt; Tipo De Cambio<br />
+Flash Drive -&gt; Memoria Flash<br />
+Give Away -&gt; Regalar<br />
+Skim -&gt; Echar Una Ojeada A<br />
+Epidemic -&gt; Epidemia<br />
+Baseball Game -&gt; Partido De Béisbol<br />
+Baggy -&gt; Suelto<br />
+Throw Out -&gt; Tirar<br />
+Pierce -&gt; Perforar<br />
+Rivalry -&gt; Rivalidad<br />
+Run Into -&gt; Chocar Con<br />
+Come Across -&gt; Encontrar<br />
+Part-Time Job -&gt; Trabajo De Medio Tiempo<br />
+Stunned -&gt; Aturdido<br />
+Get Sick -&gt; Enfermarse<br />
+Take The Bus -&gt; Tomar El Autobús<br />
+Bring Back -&gt; Devolver<br />
+Flexibility -&gt; Flexibilidad<br />
+Choking -&gt; Asfixiante<br />
+Write Down -&gt; Anotar<br />
+Noticeable -&gt; Evidente<br />
+Forum -&gt; Foro<br />
+Childcare -&gt; Cuidado De Los Niños<br />
+Job Interview -&gt; Entrevista De Trabajo<br />
+Barista -&gt; Camarero<br />
+Newsstand -&gt; Quiosco De Periódicos<br />
+New Year's Eve -&gt; Nochevieja<br />
+Redundant -&gt; Redundante<br />
+Substantial -&gt; Considerable<br />
+Absurd -&gt; Absurdo<br />
+Supplement -&gt; Suplemento<br />
+Supervise -&gt; Supervisar<br />
+Headlight -&gt; Faro<br />
+Social Network -&gt; Red Social<br />
+Convict -&gt; Presidario<br />
+Evacuate -&gt; Evacuar<br />
+Fruit Juice -&gt; Jugo De Frutas<br />
+Immediate Family -&gt; Familia Inmediata<br />
+Contact Lens -&gt; Lente De Contacto<br />
+Margarine -&gt; Margarina<br />
+Depend On -&gt; Depender De<br />
+Marvel -&gt; Maravilla<br />
+Tailgate -&gt; Puerta Trasera<br />
+Get Used To -&gt; Acostumbrarse A<br />
+Crossroads -&gt; Cruce<br />
+Mail Carrier -&gt; Cartero<br />
+Shabby -&gt; Desgastado<br />
+Horrific -&gt; Horrible<br />
+Go Camping -&gt; Hacer Camping<br />
+Make Dinner -&gt; Hacer La Cena<br />
+Superintendent -&gt; Superintendente<br />
+Leave Home -&gt; Salir De Casa<br />
+End Table -&gt; Mesa Auxiliar<br />
+Scruffy -&gt; Desaliñado<br />
+Master's Degree -&gt; Maestría<br />
+Pay For -&gt; Pagar<br />
+Gripping -&gt; Apasionante<br />
+Gradual -&gt; Gradual<br />
+Shoplifting -&gt; Hurto<br />
+Scenic -&gt; Pintoresco<br />
+Mineral Water -&gt; Agua Mineral<br />
+Oversleep -&gt; Quedarse Dormido<br />
+Switch Off -&gt; Apagar<br />
+Monsoon -&gt; Monzón<br />
+Window Seat -&gt; Asiento De Ventanilla<br />
+Polka Dot -&gt; Lunar<br />
+Loaf Of Bread -&gt; Pan<br />
+Couch Potato -&gt; Mueble<br />
+Interest Rate -&gt; Tasa De Interés<br />
+Tap Water -&gt; Agua Corriente<br />
+Vandalism -&gt; Vandalismo<br />
+Sports Car -&gt; Coche Deportivo<br />
+Solitary -&gt; Solitario<br />
+Forest Fire -&gt; Incendio Forestal<br />
+Overcrowded -&gt; Atestado<br />
+Burner -&gt; Quemador<br />
+Interpersonal -&gt; Interpersonal<br />
+Top Floor -&gt; Último Piso<br />
+Soybean -&gt; Soja<br />
+Play Golf -&gt; Jugar Golf<br />
+Subtitle -&gt; Subtítulo<br />
+Attic -&gt; Ático<br />
+Cooked -&gt; Cocido<br />
+Tower -&gt; Torre<br />
+Wrap -&gt; Envolver<br />
+Virus -&gt; Virus<br />
+Exist -&gt; Existir<br />
+Freezer -&gt; Congelador<br />
+Planet -&gt; Planeta<br />
+Violence -&gt; Violencia<br />
+Daring -&gt; Atrevido<br />
+Citizenship -&gt; Ciudadanía<br />
+Scar -&gt; Cicatriz<br />
+Protection -&gt; Protección<br />
+Justice -&gt; Justicia<br />
+Normally -&gt; Normalmente<br />
+Channel -&gt; Canal<br />
+Reality -&gt; Realidad<br />
+Zucchini -&gt; Calabacín<br />
+Faithful -&gt; Fiel<br />
+Winner -&gt; Ganador<br />
+Resource -&gt; Recurso<br />
+Figure -&gt; Figura<br />
+Function -&gt; Función<br />
+Dryer -&gt; Secadora<br />
+Silent -&gt; Callado<br />
+Producer -&gt; Productor<br />
+Kilo -&gt; Kilo<br />
+Optimistic -&gt; Optimista<br />
+Massage -&gt; Masaje<br />
+Mustard -&gt; Mostaza<br />
+Designer -&gt; Diseñador<br />
+Obtain -&gt; Obtener<br />
+Accounting -&gt; Contabilidad<br />
+Cloth -&gt; Tela<br />
+Port -&gt; Puerto<br />
+Skating -&gt; Patinaje<br />
+Attendance -&gt; Asistencia<br />
+Enemy -&gt; Enemigo<br />
+Settlement -&gt; Poblado<br />
+Historical -&gt; Histórico<br />
+Obey -&gt; Obedecer<br />
+Greeting -&gt; Saludo<br />
+Astronaut -&gt; Astronauta<br />
+Gazpacho -&gt; Gazpacho<br />
+Profession -&gt; Profesión<br />
+Prepared -&gt; Preparado<br />
+Palace -&gt; Palacio<br />
+Rugby -&gt; Rugby<br />
+Dictatorship -&gt; Dictadura<br />
+Victim -&gt; Víctima<br />
+Useless -&gt; Inútil<br />
+Workshop -&gt; Taller<br />
+Prejudice -&gt; Prejuicio<br />
+Lately -&gt; Últimamente<br />
+Isolated -&gt; Aislado<br />
+Mayonnaise -&gt; Mayonesa<br />
+Great-Grandmother -&gt; Bisabuela<br />
+Editor -&gt; Editor<br />
+Godmother -&gt; Madrina<br />
+Affectionate -&gt; Cariñoso<br />
+Disorganized -&gt; Desorganizado<br />
+Identification -&gt; Identificación<br />
+Explanation -&gt; Explicación<br />
+Destruction -&gt; Destrucción<br />
+Godfather -&gt; Padrino<br />
+Occupation -&gt; Ocupación<br />
+Vinegar -&gt; Vinagre<br />
+Unforgettable -&gt; Inolvidable<br />
+Interrupt -&gt; Interrumpir<br />
+Unexpected -&gt; Inesperado<br />
+Journalism -&gt; Periodismo<br />
+Paste -&gt; Pegar<br />
+Surprising -&gt; Sorprendente<br />
+Measurement -&gt; Medida<br />
+Charger -&gt; Cargador<br />
+Mattress -&gt; Colchón<br />
+Creation -&gt; Creación<br />
+Pedestrian -&gt; Peatón<br />
+Discipline -&gt; Disciplina<br />
+Inform -&gt; Informar<br />
+Gasoline -&gt; Gasolina<br />
+Banker -&gt; Banquero<br />
+Jealousy -&gt; Celos<br />
+Lung -&gt; Pulmón<br />
+Stepdaughter -&gt; Hijastra<br />
+Great-Grandfather -&gt; Bisabuelo<br />
+Food Processor -&gt; Procesador De Alimentos<br />
+Move To -&gt; Mudarse A<br />
+Take Into Account -&gt; Tener En Cuenta<br />
+Comfort Zone -&gt; Zona De Confort<br />
+Factory Worker -&gt; Operario<br />
+Vocational -&gt; Profesional<br />
+Cup Of Coffee -&gt; Taza De Café<br />
+Clothes Shop -&gt; Tienda De Ropa<br />
+Lethal -&gt; Mortal<br />
+Convenience Store -&gt; Tienda<br />
+Go Sightseeing -&gt; Ir A Hacer Turismo<br />
+Ex-Wife -&gt; Exesposa<br />
+Do Me A Favor -&gt; Hacerme Un Favor<br />
+Small Talk -&gt; Cháchara<br />
+Briefs -&gt; Calzones<br />
+Birthday Card -&gt; Tarjeta De Cumpleaños<br />
+Price Tag -&gt; Etiqueta De Precio<br />
+Parking Garage -&gt; Garaje<br />
+Take A Taxi -&gt; Tomar Un Taxi<br />
+Concert Hall -&gt; Sala De Conciertos<br />
+Worry About -&gt; Preocuparse Por<br />
+Heating Pad -&gt; Almohadilla Térmica<br />
+Horror Film -&gt; Película De Terror<br />
+Read The Newspaper -&gt; Leer El Periódico<br />
+Intensive -&gt; Intensivo<br />
+Microchip -&gt; Microchip<br />
+Filing Cabinet -&gt; Archivador<br />
+Go To The Cinema -&gt; Ir Al Cine<br />
+Have A Picnic -&gt; Hacer Un Picnic<br />
+Computer Game -&gt; Juego De Computadora<br />
+Sleep Late -&gt; Dormir Hasta Tarde<br />
+Populate -&gt; Poblar<br />
+Ex-Husband -&gt; Ex Marido<br />
+Rent A Car -&gt; Alquilar Un Coche<br />
+Blow Your Nose -&gt; Sonarse La Nariz<br />
+Forage -&gt; Buscar</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="7" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Extras</h2>
+<p>Sofá --&gt; Couch<br />
+Almohada --&gt; Pillow<br />
+Sombrero --&gt; Hat<br />
+Escritorio --&gt; Desk<br />
+Horno --&gt; Oven<br />
+Cuchara --&gt; Spoon<br />
+Puente --&gt; Bridge<br />
+Taladro --&gt; Drill<br />
+Cuerda --&gt; Rope<br />
+Enchufe --&gt; Plug<br />
+Sótano --&gt; Basement<br />
+Martillo --&gt; Hammer<br />
+Repisa --&gt; Shelf<br />
+Manta -&gt; Blanket</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="8" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h1>Verbos Frasales</h1>
+<p>Run away --&gt; Escaparse o huir<br />
+Look out -- &gt; Ser cuidadoso o estar atento<br />
+Move in --&gt; Mudarse o avanzar<br />
+Break down --&gt; Dejar de funcionar<br />
+Come back --&gt; Volver<br />
+Walk out --&gt; Irse de un lugar de repente<br />
+Try on --&gt; Probar algo<br />
+Pick up --&gt; Recoger<br />
+Drop out --&gt; Dejar de hacer algo justo antes de terminar<br />
+Work out --&gt; Hacer ejercicio<br />
+Find out --&gt; Descubrir algo</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="9" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h1>Verbos Modales</h1>
+<ul>
+<li><a href="#can">Can</a></li>
+<li><a href="#could">Could</a></li>
+<li><a href="#should">Should</a></li>
+<li><a href="#may">May</a></li>
+<li><a href="#might">Might</a></li>
+<li><a href="#will">Will</a></li>
+<li><a href="#shall">Shall</a></li>
+<li><a href="#would">Would</a></li>
+<li><a href="#must">Must</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="10" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Can</h2>
+<p>Este verbo modal nos indica posibilidad o habilidad y es lo que en español conocemos cómo <strong>poder</strong>.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://i.blogs.es/0e7644/cocinar-recetas11/450_1000.jpg" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I can cook very well.</li>
+<li>Puedo cocinar muy bien.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119592360-f43bb180-bd9d-11eb-89be-9038a94efeba.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I can play the guitar.</li>
+<li>Puedo tocar la guitarra.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="11" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Could</h2>
+<p>Este verbo modal es el pasado de can por lo que también indica habilidad o posibilidad y es lo que en español conocemos cómo <strong>podría</strong>.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119591885-0b2dd400-bd9d-11eb-87a3-ae20dd26a775.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I could help you.</li>
+<li>Podría ayudarte.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119591942-24cf1b80-bd9d-11eb-8199-4289e79f0a07.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I could study more.</li>
+<li>Podría estudiar más.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="12" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Should</h2>
+<p>Este verbo modal nos indica una obligación o recomendación y en español lo conocemos como <strong>debería</strong>.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119594900-41218700-bda2-11eb-98bf-a5dab1c1e342.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I should study for the exam.</li>
+<li>Debería estudiar para el examen.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119594949-57c7de00-bda2-11eb-9547-9766432150b7.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I should practice a little bit more.</li>
+<li>Debería practicar un poco más.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="13" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>May</h2>
+<p>Este verbo modal nos indica posibilidad o probabilidad pero en futuro y en español lo conocemos como <strong>Podría, Puede que o Quizás</strong>.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595011-74641600-bda2-11eb-8dc6-3f6b88acaf34.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I may go out tonight.</li>
+<li>Puede que salga esta noche.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595049-88a81300-bda2-11eb-9570-ed29871d0db5.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I may eat pizza today.</li>
+<li>Quizás hoy coma pizza.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="14" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Might</h2>
+<p>Este verbo modal es un sinónimo de May para indicar posibilidades en el presente o en el futuro, su única diferencia es que normalmente usamos may para hacer peticiones o pedir información y usamos might para hacer sugerencias o indiccar posibilidades y su traducción también puede ser <strong>Podría, Puede que o Quizás</strong>.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595083-965d9880-bda2-11eb-8cba-ee2a46b446b4.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I might go to the gym today.</li>
+<li>Quizás vaya al gimnasio hoy.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595113-a70e0e80-bda2-11eb-8dbb-fe881f444fc5.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I might study again for the test.</li>
+<li>Puede que estudie de nuevo para la prueba</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="15" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Will</h2>
+<p>Este verbo modal y también utilizado como un auxiliar convierte nuestras oraciones o acciones a futuro.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595190-c60ca080-bda2-11eb-80e6-96d2ac583bd5.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I will sleep early.</li>
+<li>Dormiré temprano.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595210-cf960880-bda2-11eb-9d2f-0c8e993b9c41.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I will speak English.</li>
+<li>Hablaré Inglés.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="16" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Shall</h2>
+<p>Este verbo modal es sinónimo de will y su única diferencia es que éste es más formal y se usa más en el Reino Unido.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595238-dae93400-bda2-11eb-9b7b-d53005bbf674.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I shall work tonight.</li>
+<li>Trabajaré esta noche.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595301-f5231200-bda2-11eb-8442-0720d04d62a5.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I shall eat a salad.</li>
+<li>Comeré una ensalada.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="17" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Would</h2>
+<p>Este verbo modal se usa para declarar una preferencia y preguntar por algo educadamente, en español es la terminación &quot;ría&quot; al final de cada verbo.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595337-05d38800-bda3-11eb-9017-da77a98898f1.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I would like a cup of tea.</li>
+<li>Me gustaría una taza de té.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595427-2b609180-bda3-11eb-816f-f9af9118e1ad.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I would go to my house.</li>
+<li>Yo iria a mi casa.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="18" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Must</h2>
+<p>Este verbo modal indica una obligación, prohibición o necesidad, en español es lo que conocemos como <strong>deber</strong>.</p>
+<p>Por ejemplo:</p>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595483-4206e880-bda3-11eb-9f31-5225b026cea0.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I must sleep early tonight.</li>
+<li>Debo dormir temprano esta noche.</li>
+</ul>
+&lt;img src = "https://user-images.githubusercontent.com/67721157/119595542-55b24f00-bda3-11eb-8326-c890a8c13b16.png" width = "600" height = "350" alt = "ejemplo" align = "center" /&gt;
+<ul>
+<li>I must do my homework.</li>
+<li>Debo hacer mi tarea.</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="19" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h1>El verbo to be en presente</h1>
+<p>El verbo to be (ser/estar) es uno de los verbos que más se usa en inglés y es un verbo irregular, así que es importante saber bien cómo se conjuga y cuándo se usa. En este artículo repasaremos algunas de las conjugaciones más comunes de to be, y veremos en qué contextos se usa.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="20" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Conjugaciones del verbo &quot;to be&quot;</h2>
+<p>Primero lo primero - empezaremos con un breve repaso de las conjugaciones de algunos de los tiempos simples y compuestos que más se usan con to be.</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="21" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Tiempos simples</h2>
+<p>En la tabla a continuación encontrarás las conjugaciones para the<br />
+present (el presente) y the past (el pretérito) de to be.</p>
+<table>
+<thead>
+<tr>
+<th>Sujeto</th>
+<th>Present</th>
+<th>Past</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>am</td>
+<td>was</td>
+</tr>
+<tr>
+<td>You</td>
+<td>are</td>
+<td>were</td>
+</tr>
+<tr>
+<td>He/She/It</td>
+<td>is</td>
+<td>was</td>
+</tr>
+<tr>
+<td>We</td>
+<td>are</td>
+<td>were</td>
+</tr>
+<tr>
+<td>They</td>
+<td>are</td>
+<td>were</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="22" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Tiempos compuestos</h2>
+<p>En la tabla a continuación encontrarás las conjugaciones para the simple<br />
+future (el futuro simple), the informal future (el futuro perifrástico), the present continuous (el presente progresivo), the present perfect (el pretérito perfecto) y the conditional (el condicional) de to be.</p>
+<table>
+<thead>
+<tr>
+<th>Sujeto</th>
+<th>SIMPLE FUTURE</th>
+<th>INFORMAL FUTURE</th>
+<th>PRESENT CONTINUOUS</th>
+<th>PRESENT PERFECT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>will be</td>
+<td>am going to be</td>
+<td>am being</td>
+<td>have been</td>
+</tr>
+<tr>
+<td>You</td>
+<td>will be</td>
+<td>are going to be</td>
+<td>are being</td>
+<td>have been</td>
+</tr>
+<tr>
+<td>He/She/It</td>
+<td>will be</td>
+<td>is going to be</td>
+<td>is being</td>
+<td>has been</td>
+</tr>
+<tr>
+<td>We</td>
+<td>will be</td>
+<td>are going to be</td>
+<td>are being</td>
+<td>have been</td>
+</tr>
+<tr>
+<td>They</td>
+<td>will be</td>
+<td>are going to be</td>
+<td>are being</td>
+<td>have been</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="23" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Usos comunes de to be</h2>
+<p>To be se usa en muchos contextos en los que en español se usaría ser, estar y incluso tener. Veamos algunos de los contextos en los que se usa to be.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+I am twenty years old.
+Tengo veinte años.
+
+My twin brothers are five years old.
+Mis hermanos gemelos tienen cinco años.
+
+This house is already fifteen years old.
+Esta casa ya tiene quince años.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="24" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Descripciones</h2>
+<p>To be se usa para dar otras descripciones, incluyendo la altura, el peso, la nacionalidad, y el color de algo o de alguien.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+I am five feet tall.
+Mido cinco pies de altura.
+
+I’m one hundred and twenty pounds.
+Peso ciento viente libras.
+
+I’m French, but he is American.
+Soy francés, pero él es estadounidense.
+
+Her eyes are green.
+Sus ojos son verdes.
+
+This book is new.
+Este libro es nuevo.
+
+Your shirt is dirty.
+Tu camisa está sucia.
+</span></span></foreignObject></svg></code></pre>
+<p>También se usa para hablar de estados físicos y mentales.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+I’m hungry.
+Tengo hambre.
+
+I’m sleepy.
+Tengo sueño.
+
+They’re crazy!
+¡Están locos!
+
+He is angry.
+Está enojado.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="25" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Contracciones</h2>
+<p>Es muy común usar contracciones con to be en inglés. To be tiene tres tipos de contracciones en presente, incluyendo dos variantes negativas y una variante afirmativa.</p>
+<p>Contracciones afirmativas con to be en presente</p>
+<table>
+<thead>
+<tr>
+<th>CONTRACCIÓN AFIRMATIVA</th>
+<th>TRADUCCIÓN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I'm a student</td>
+<td>Soy estudiante</td>
+</tr>
+<tr>
+<td>You're a doctor</td>
+<td>Eres doctor</td>
+</tr>
+<tr>
+<td>He's a teacher</td>
+<td>Es maestro</td>
+</tr>
+<tr>
+<td>We're friends</td>
+<td>Somos amigos</td>
+</tr>
+<tr>
+<td>They're writers</td>
+<td>Son escritores</td>
+</tr>
+</tbody>
+</table>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="26" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Ocupaciones y relaciones personales</h2>
+<p>To be se usa para hablar de ocupaciones y de relaciones personales.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+I’m a doctor.
+Soy doctor.
+
+They are students.
+Son estudiantes.
+
+Liz is my sister.
+Liz es mi hermana.
+
+She is his grandmother.
+Ella es su abuela.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="27" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>La hora y la fecha</h2>
+<p>To be se usa para dar la hora y la fecha. Para dar la hora en inglés, siempre se ocupa la tercera persona del singular (is, was).</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+It is three o’clock.
+Son las tres.
+
+It was four in the morning
+Eran las cuatro de la madrugada.
+
+What date is it today? - Today is July first.
+¿A cómo estamos hoy? - Hoy es el primero de julio.
+
+Today is Wednesday.
+Hoy es miércoles.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="28" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>Ubicaciones</h2>
+<p>To be se usa para hablar de la ubicación de algo o de algún lugar.</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+The book is not on the table.
+El libro no está sobre la mesa.
+
+My house is next to the library.
+Mi casa está al lado de la biblioteca.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="29" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>To be como verbo auxiliar</h2>
+<p>El verbo to be se usa como verbo auxiliar en varios tiempos verbales, tales como los que se ven en la tabla. Nota: La tabla muestra el verbo to be usado como verbo auxiliar con el verbo principal to go</p>
+<table>
+<thead>
+<tr>
+<th>Sujeto</th>
+<th>Present</th>
+<th>Past</th>
+<th>Future</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>am going</td>
+<td>was going</td>
+<td>will be going</td>
+</tr>
+<tr>
+<td>You</td>
+<td>are going</td>
+<td>were going</td>
+<td>will be going</td>
+</tr>
+<tr>
+<td>He/She/It</td>
+<td>is going</td>
+<td>was going</td>
+<td>will be going</td>
+</tr>
+<tr>
+<td>We</td>
+<td>are going</td>
+<td>were going</td>
+<td>will be going</td>
+</tr>
+<tr>
+<td>They</td>
+<td>are going</td>
+<td>were going</td>
+<td>will be going</td>
+</tr>
+</tbody>
+</table>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+I am going to the store.
+Estoy yendo a la tienda.
+
+I was going to the library.
+Estaba yendo a la biblioteca.
+
+I will be going to the station in an hour.
+Estaré yendo a la estación en una hora.
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-class="invert" data-paginate="true" data-theme="gaia" data-heading-divider="2" class="invert" data-marpit-pagination="30" data-marpit-pagination-total="30" style="--class:invert;--paginate:true;--theme:gaia;--heading-divider:2;">
+<h2>To be en voz pasiva</h2>
+<p>El verbo to be también se usa para formar la voz pasiva.</p>
+<h3>Fórmula para la voz pasiva</h3>
+<p>Sujeto + to be + participio</p>
+<pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>EJEMPLOS
+He was born on Christmas.
+Nació en Navidad.
+
+They were hired by an Argentinean company.
+Fueron contratados por una empresa argentina.
+
+The house was bought yesterday.
+La casa se compró ayer.
+</span></span></foreignObject></svg></code></pre>
+</section>
+<script>!function(){"use strict";const t="marpitSVGPolyfill:setZoomFactor,",e=Symbol();let r,o;function n(n){const i="object"==typeof n&&n.target||document,a="object"==typeof n?n.zoom:n;window[e]||(Object.defineProperty(window,e,{configurable:!0,value:!0}),window.addEventListener("message",(({data:e,origin:r})=>{if(r===window.origin)try{if(e&&"string"==typeof e&&e.startsWith(t)){const[,t]=e.split(","),r=Number.parseFloat(t);Number.isNaN(r)||(o=r)}}catch(t){console.error(t)}})));let l=!1;Array.from(i.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,n,i,s;t.style.transform||(t.style.transform="translateZ(0)");const c=a||o||t.currentScale||1;r!==c&&(r=c,l=c);const d=t.getBoundingClientRect(),{length:u}=t.children;for(let r=0;r<u;r+=1){const o=t.children[r],a=o.getScreenCTM();if(a){const t=null!==(n=null===(e=o.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==n?n:0,r=null!==(s=null===(i=o.y)||void 0===i?void 0:i.baseVal.value)&&void 0!==s?s:0,l=o.firstElementChild,{style:u}=l;u.transformOrigin||(u.transformOrigin=`${-t}px ${-r}px`),u.transform=`scale(${c}) matrix(${a.a}, ${a.b}, ${a.c}, ${a.d}, ${a.e-d.left}, ${a.f-d.top}) translateZ(0.0001px)`}}})),!1!==l&&Array.from(i.querySelectorAll("iframe"),(({contentWindow:e})=>{null==e||e.postMessage(`${t}${l}`,"null"===window.origin?"*":window.origin)}))}r=1,o=void 0;const i=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function a({once:t=!1,target:e=document}={}){const r="Apple Computer, Inc."===navigator.vendor?[n]:[];let o=!t;const a=()=>{for(const t of r)t({target:e});!function(t=document){Array.from(t.querySelectorAll('svg[data-marp-fitting="svg"]'),(t=>{var e;const r=t.firstChild,o=r.firstChild,{scrollWidth:n,scrollHeight:a}=o;let l,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(l=null===(e=t.parentElement)||void 0===e?void 0:e.parentElement),t.hasAttribute("data-marp-fitting-math")&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft||"0")-parseFloat(t.paddingRight||"0"));e&&(s=e)}const c=Math.max(n,s),d=Math.max(a,1),u=`0 0 ${c} ${d}`;i(r,"width",`${c}`),i(r,"height",`${d}`),i(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),i(t,"viewBox",u)&&t.classList.toggle("__reflow__")}))}(e),o&&window.requestAnimationFrame(a)};return a(),()=>{o=!1}}const l=Symbol(),s=document.currentScript;((t=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(t[l])return t[l];const e=a({target:t}),r=()=>{e(),delete t[l]};Object.defineProperty(t,l,{configurable:!0,value:r})})(s?s.getRootNode():document)}();
+</script></foreignObject></svg></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),o={},a=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){o[e]=(o[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(o[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",a(n,t)),n=s[e],l("activate",a(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(o[e]||(o[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",a(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",a(n,e)),o={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function o(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const o=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",o?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const o={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",o)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const o=t+1;e.fragments[o]&&s(o,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const o=t-1;e.fragments[o]&&s(o,e.fragments[o].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){
+/*!
+  * screenfull
+  * v5.0.2 - 2020-02-13
+  * (c) Sindre Sorhus; MIT License
+  */
+!function(){var t="undefined"!=typeof window&&void 0!==window.document?window.document:{},n=e.exports,r=function(){for(var e,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,s=n.length,o={};r<s;r++)if((e=n[r])&&e[1]in t){for(r=0;r<e.length;r++)o[n[0][r]]=e[r];return o}return!1}(),s={change:r.fullscreenchange,error:r.fullscreenerror},o={request:function(e){return new Promise(function(n,s){var o=function(){this.off("change",o),n()}.bind(this);this.on("change",o);var a=(e=e||t.documentElement)[r.requestFullscreen]();a instanceof Promise&&a.then(o).catch(s)}.bind(this))},exit:function(){return new Promise(function(e,n){if(this.isFullscreen){var s=function(){this.off("change",s),e()}.bind(this);this.on("change",s);var o=t[r.exitFullscreen]();o instanceof Promise&&o.then(s).catch(n)}else e()}.bind(this))},toggle:function(e){return this.isFullscreen?this.exit():this.request(e)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(e,n){var r=s[e];r&&t.addEventListener(r,n,!1)},off:function(e,n){var r=s[e];r&&t.removeEventListener(r,n,!1)},raw:r};r?(Object.defineProperties(o,{isFullscreen:{get:function(){return Boolean(t[r.fullscreenElement])}},element:{enumerable:!0,get:function(){return t[r.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(t[r.fullscreenEnabled])}}}),n?e.exports=o:window.screenfull=o):n?e.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}()}));l.isEnabled;function c(e){e.fullscreen=()=>{l.isEnabled&&l.toggle(document.body)},document.addEventListener("keydown",t=>{70!==t.which&&122!==t.which||t.altKey||t.ctrlKey||t.metaKey||!l.isEnabled||(e.fullscreen(),t.preventDefault())})}function d(e={}){const t=Object.assign({interval:200},e);return e=>{document.addEventListener("keydown",t=>{(32===t.which&&t.shiftKey||33===t.which||37===t.which||38===t.which)&&e.prev(),(32===t.which&&!t.shiftKey||34===t.which||39===t.which||40===t.which)&&e.next(),35===t.which&&e.slide(e.slides.length-1,{fragment:-1}),36===t.which&&e.slide(0)});let n,r,s=0;e.parent.addEventListener("wheel",o=>{let a=!1;const l=(e,t)=>{e&&(a=a||function(e,t){return function(e,t){const n=t===i.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),(null==e?void 0:e.parentElement)&&l(e.parentElement,t)};if(0!==o.deltaX&&l(o.target,i.X),0!==o.deltaY&&l(o.target,i.Y),a)return;o.preventDefault(),r&&clearTimeout(r),r=setTimeout(()=>{n=0},t.interval);const c=Date.now()-s<t.interval,d=Math.sqrt(Math.pow(o.deltaX,2)+Math.pow(o.deltaY,2)),u=d<=n;if(n=d,c||u)return;let f;(o.deltaX>0||o.deltaY>0)&&(f="next"),(o.deltaX<0||o.deltaY<0)&&(f="prev"),f&&(e[f](),s=Date.now())})}}!function(e){e.X="X",e.Y="Y"}(i||(i={}));const u=(...e)=>history.replaceState(...e);var f;!function(e){e.Normal="",e.Presenter="presenter",e.Next="next"}(f||(f={}));const p=(e,{protocol:t,host:n,pathname:r,hash:s}=location)=>{const o=e.toString();return`${t}//${n}${r}${o?"?":""}${o}${s}`},m=()=>{switch(document.body.getAttribute("data-bespoke-view")){case f.Normal:return f.Normal;case f.Presenter:return f.Presenter;case f.Next:return f.Next;default:throw new Error("View mode is not assigned.")}},h=e=>new URLSearchParams(location.search).get(e),g=(e,t={})=>{const n=Object.assign({location:location,setter:u},t),r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter(null,document.title,p(r,n.location))}catch(e){console.error(e)}},b={available:(()=>{try{return localStorage.setItem("bespoke-marp","bespoke-marp"),localStorage.removeItem("bespoke-marp"),!0}catch(e){return console.warn("Warning: Using localStorage is restricted in the current host so some features may not work."),!1}})(),get:e=>{try{return localStorage.getItem(e)}catch(e){return null}},set:(e,t)=>{try{return localStorage.setItem(e,t),!0}catch(e){return!1}},remove:e=>{try{return localStorage.removeItem(e),!0}catch(e){return!1}}};function v(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return l.isEnabled||n("fullscreen",e=>e.style.display="none"),b.available||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;switch(n&&t.target.blur(),n){case"next":e.next();break;case"prev":e.prev();break;case"fullscreen":"function"==typeof e.fullscreen&&l.isEnabled&&e.fullscreen();break;case"presenter":e.openPresenterView()}}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:s})=>{n("prev",e=>e.disabled=0===t&&0===s),n("next",n=>n.disabled=t===e.slides.length-1&&s===r.length-1)}),l.isEnabled&&l.onchange(()=>n("fullscreen",e=>e.classList.toggle("exit",l.isEnabled&&l.isFullscreen)))}}function w(){const e=Math.max(Math.floor(.85*window.innerWidth),640),t=Math.max(Math.floor(.85*window.innerHeight),360);return window.open(this.presenterUrl,`bespoke-marp-presenter-${this.syncKey}`,`width=${e},height=${t},menubar=no,toolbar=no`)}function y(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),p(e)}var x=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"];let E=e=>String(e).replace(/[&<>"']/g,e=>`&${k[e]};`),k={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},S="dangerouslySetInnerHTML",L={className:"class",htmlFor:"for"},I={};function P(e,t){let n=[],r="";t=t||{};for(let e=arguments.length;e-- >2;)n.push(arguments[e]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(let e in t)!1!==t[e]&&null!=t[e]&&e!==S&&(r+=` ${L[e]?L[e]:E(e)}="${E(t[e])}"`);r+=">"}if(-1===x.indexOf(e)){if(t[S])r+=t[S].__html;else for(;n.length;){let e=n.pop();if(e)if(e.pop)for(let t=e.length;t--;)n.push(e[t]);else r+=!0===I[e]?e:E(e)}r+=e?`</${e}>`:""}return I[r]=!0,r}const M=({children:e})=>P(null,null,...e),N="bespoke-marp-presenter-container",$="bespoke-marp-presenter-next",F="bespoke-marp-presenter-next-container",O="bespoke-marp-presenter-note-container",T="bespoke-marp-presenter-info-container",q="bespoke-marp-presenter-info-page",C="bespoke-marp-presenter-info-page-text",j="bespoke-marp-presenter-info-page-prev",A="bespoke-marp-presenter-info-page-next",K="bespoke-marp-presenter-info-time",R="bespoke-marp-presenter-info-timer";function U(e){const{title:t}=document;document.title=`[Presenter view]${t?` - ${t}`:""}`;const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=N,t.appendChild(e),t.insertAdjacentHTML("beforeend",P(M,null,P("div",{class:F},P("iframe",{class:$,src:"?view=next"})),P("div",{class:O}),P("div",{class:T},P("div",{class:q},P("button",{class:j,tabindex:"-1",title:"Previous"},"Previous"),P("span",{class:C}),P("button",{class:A,tabindex:"-1",title:"Next"},"Next")),P("time",{class:K,title:"Current time"}),P("div",{class:R})))),t})(e.parent)),(e=>{r(F).addEventListener("click",()=>e.next());const t=r($),n=(s=t,(e,t)=>s.contentWindow.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var s;t.addEventListener("load",()=>{r(F).classList.add("active"),n(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>n(e,t))});const o=document.querySelectorAll(".bespoke-marp-note");o.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(O).appendChild(e)}),e.on("activate",()=>o.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide()))),e.on("activate",({index:t})=>{r(C).textContent=`${t+1} / ${e.slides.length}`});const a=r(j),i=r(A);a.addEventListener("click",()=>{a.blur(),e.prev()}),i.addEventListener("click",()=>{i.blur(),e.next()}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{a.disabled=0===t&&0===r,i.disabled=t===e.slides.length-1&&r===n.length-1});const l=()=>r(K).textContent=(new Date).toLocaleTimeString();l(),setInterval(l,250)})(e)}function V(e){const t=m();return t===f.Next&&e.appendChild(document.createElement("span")),e=>{t===f.Normal&&function(e){if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:w},presenterUrl:{enumerable:!0,get:y}}),b.available&&document.addEventListener("keydown",t=>{80!==t.which||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})}(e),t===f.Presenter&&U(e),t===f.Next&&function(e){const t=t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");e.slide(Number.parseInt(t,10),{fragment:Number.parseInt(n,10)}),e.next()}};window.addEventListener("message",t),e.on("destroy",()=>window.removeEventListener("message",t))}(e)}}function X(e){e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-bar").forEach(n=>{n.style.flexBasis=`${100*t.index/(e.slides.length-1)}%`})})}const D=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function Y(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},s=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:s}=e,o=Math.max(0,Math.min(t,s.length-1)),a=Math.max(0,Math.min(n||0,r[o].length-1));o===e.slide()&&a===e.fragmentIndex||e.slide(o,{fragment:a})})((D(location.hash.slice(1))||1)-1,t.fragment?D(h("f")||""):null)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||g({f:0===r||r.toString()},{location:Object.assign(Object.assign({},location),{hash:`#${e+1}`}),setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{s(),window.addEventListener("hashchange",()=>r(()=>{s({fragment:!1}),g({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>s())}),n=!1},0)}}for(var B=self.crypto||self.msCrypto,z="-_",H=36;H--;)z+=H.toString(36);for(H=36;H---10;)z+=H.toString(36).toUpperCase();function J(e={}){const t=e.key||function(e){var t="",n=B.getRandomValues(new Uint8Array(e||21));for(H=e||21;H--;)t+=z[63&n[H]];return t}(),n=`bespoke-marp-sync-${t}`,r=()=>{const e=b.get(n);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=r(),s=Object.assign(Object.assign({},t),e(t));return b.set(n,JSON.stringify(s)),s};return s(e=>({reference:(e.reference||0)+1})),e=>{Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let o=!0;setTimeout(()=>{e.on("fragment",e=>{o&&s(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),r=JSON.parse(t.newValue);if(n.index!==r.index||n.fragmentIndex!==r.fragmentIndex)try{o=!1,e.slide(r.index,{fragment:r.fragmentIndex})}finally{o=!0}}}),e.on("destroy",()=>{const{reference:e}=r();void 0===e||e<=1?b.remove(n):s(()=>({reference:e-1}))})}}function W(e={}){const t=Object.assign({slope:Math.tan(-35*Math.PI/180),swipeThreshold:30},e);return e=>{let n;const r=e.parent,s=e=>{const t=r.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};r.addEventListener("touchstart",e=>{n=1===e.touches.length?s(e.touches[0]):void 0},{passive:!0}),r.addEventListener("touchmove",e=>{if(n)if(1===e.touches.length){e.preventDefault();const t=s(e.touches[0]),r=t.x-n.x,o=t.y-n.y;n.delta=Math.sqrt(Math.pow(Math.abs(r),2)+Math.pow(Math.abs(o),2)),n.radian=Math.atan2(r,o)}else n=void 0}),r.addEventListener("touchend",r=>{if(n){if(n.delta&&n.delta>=t.swipeThreshold){let s=n.radian-t.slope;s=(s+Math.PI)%(2*Math.PI)-Math.PI,e[s<0?"next":"prev"](),r.stopPropagation()}n=void 0}},{passive:!0})}}const _=[f.Normal,f.Presenter,f.Next];!function(r=document.getElementById("p")){document.body.setAttribute("data-bespoke-view",(()=>{switch(h("view")){case"next":return f.Next;case"presenter":return f.Presenter;default:return f.Normal}})());const i=(e=>{const t=h(e);return g({[e]:void 0}),t})("sync")||void 0,l=!1,u=!0,p=e(r,((...e)=>{const t=_.findIndex(e=>m()===e);if(t<0)throw new Error("Invalid view");return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[u,u,l],J({key:i})],[[u,u,u],V(r)],[[u,u,l],s],[[u,u,u],t],[[u,l,l],n()],[[u,u,u],o],[[u,u,u],Y({history:!1})],[[u,u,l],d()],[[u,u,l],c],[[u,l,l],X],[[u,u,l],W()],[[u,l,l],v()],[[u,u,u],a]));window.addEventListener("beforeunload",()=>g({sync:p.syncKey})),window.addEventListener("unload",()=>p.destroy())}()}();
+</script></body></html>
