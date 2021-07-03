@@ -11,7 +11,6 @@ _class:
  - lead
  - invert
 -->
-# Excelente
 # Learning English
 This is the page that I will use for my english lessons.
 
